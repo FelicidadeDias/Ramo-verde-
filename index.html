@@ -1,0 +1,2819 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#075b2a">
+<meta name="description" content="Colégio Ramo Verde — Educação, Disciplina e Futuro. Matrículas 2026/2027.">
+
+<title>Colégio Ramo Verde | Educação • Disciplina • Futuro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--green:#075b2a;
+--green2:#0b7a39;
+--green3:#063e1e;
+--lime:#8fcf27;
+--gold:#d8ad42;
+--bg:#f5faf2;
+--ink:#12301f;
+--muted:#64756b;
+--line:#dce8dc;
+--white:#fff;
+--shadow:0 20px 60px rgba(5,70,30,.12);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:"DM Sans",sans-serif;
+color:var(--ink);
+background:#fff;
+line-height:1.6;
+}
+
+img{
+max-width:100%;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+font:inherit;
+}
+
+.wrap{
+width:min(1160px,calc(100% - 32px));
+margin:auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+background:var(--green3);
+color:#fff;
+font-size:12px;
+}
+
+.topbar .wrap{
+min-height:38px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(7,91,42,.1);
+}
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:54px;
+height:54px;
+border-radius:50%;
+background:var(--green);
+display:grid;
+place-items:center;
+box-shadow:0 7px 20px rgba(7,91,42,.2);
+overflow:hidden;
+}
+
+.logo svg{
+width:42px;
+height:42px;
+}
+
+.brand-name{
+font-weight:900;
+font-size:16px;
+color:var(--green);
+}
+
+.brand-sub{
+font-size:8px;
+font-weight:800;
+letter-spacing:1.2px;
+color:#718077;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:20px;
+font-size:13px;
+font-weight:800;
+}
+
+.nav-links a:hover{
+color:var(--green2);
+}
+
+.nav-cta{
+background:var(--green);
+color:#fff!important;
+padding:11px 16px;
+border-radius:12px;
+}
+
+.menu{
+display:none;
+border:0;
+background:#edf6eb;
+color:var(--green);
+font-size:23px;
+width:44px;
+height:44px;
+border-radius:12px;
+cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(135deg,#edf8e9 0%,#fff 55%,#f0f9e9 100%);
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:rgba(143,207,39,.1);
+right:-180px;
+top:-180px;
+}
+
+.hero .wrap{
+position:relative;
+z-index:2;
+min-height:650px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+padding:65px 0;
+}
+
+.tag{
+display:inline-flex;
+align-items:center;
+gap:6px;
+background:#e0f0d8;
+color:var(--green);
+padding:8px 13px;
+border-radius:50px;
+font-size:11px;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.hero h1{
+font-family:"Playfair Display",serif;
+font-size:clamp(43px,6vw,70px);
+line-height:1.02;
+letter-spacing:-2px;
+margin:18px 0;
+}
+
+.hero h1 span{
+color:var(--green);
+}
+
+.hero-text{
+font-size:16px;
+color:var(--muted);
+max-width:610px;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+border:0;
+border-radius:13px;
+padding:13px 18px;
+font-weight:900;
+cursor:pointer;
+transition:.25s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.primary{
+background:var(--green);
+color:#fff;
+box-shadow:0 12px 30px rgba(7,91,42,.2);
+}
+
+.secondary{
+background:#fff;
+color:var(--green);
+border:1px solid #cfe0cf;
+}
+
+.hero-location{
+margin-top:20px;
+color:var(--muted);
+font-size:13px;
+}
+
+/* HERO IMAGE */
+
+.hero-visual{
+position:relative;
+}
+
+.hero-photo{
+padding:9px;
+background:#fff;
+border-radius:28px;
+box-shadow:var(--shadow);
+transform:rotate(1deg);
+}
+
+.hero-photo img{
+width:100%;
+height:475px;
+object-fit:cover;
+display:block;
+border-radius:20px;
+}
+
+.hero-card{
+position:absolute;
+left:-28px;
+bottom:-25px;
+background:#fff;
+border:1px solid var(--line);
+box-shadow:var(--shadow);
+border-radius:18px;
+padding:16px;
+width:260px;
+font-size:12px;
+}
+
+.hero-card strong{
+display:block;
+color:var(--green);
+font-size:15px;
+margin-bottom:3px;
+}
+
+.hero-badge{
+position:absolute;
+right:-14px;
+top:28px;
+background:var(--green);
+color:#fff;
+padding:14px 17px;
+border-radius:16px;
+box-shadow:var(--shadow);
+font-size:11px;
+font-weight:800;
+}
+
+.hero-badge strong{
+display:block;
+font-size:17px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+position:relative;
+z-index:5;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:13px;
+margin-top:-35px;
+}
+
+.stat{
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+padding:20px;
+box-shadow:0 12px 35px rgba(5,70,30,.07);
+}
+
+.stat b{
+display:block;
+font-size:23px;
+color:var(--green);
+}
+
+.stat span{
+font-size:11px;
+color:var(--muted);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+padding:85px 0;
+}
+
+.section-head{
+max-width:730px;
+margin-bottom:38px;
+}
+
+.section-head small{
+color:var(--green);
+font-weight:900;
+letter-spacing:1.5px;
+text-transform:uppercase;
+font-size:11px;
+}
+
+.section-head h2{
+font-family:"Playfair Display",serif;
+font-size:clamp(32px,4vw,49px);
+line-height:1.05;
+margin:9px 0 13px;
+}
+
+.section-head p{
+color:var(--muted);
+}
+
+/* =========================
+   MATRÍCULAS
+========================= */
+
+#matriculas{
+background:var(--bg);
+}
+
+.prices{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.price{
+overflow:hidden;
+background:#fff;
+border:1px solid var(--line);
+border-radius:20px;
+box-shadow:0 12px 35px rgba(5,70,30,.06);
+}
+
+.price-top{
+color:#fff;
+background:linear-gradient(135deg,var(--green),var(--green2));
+padding:25px;
+}
+
+.price:nth-child(2) .price-top{
+background:linear-gradient(135deg,#64a918,#91cc2c);
+}
+
+.price-top h3{
+font-size:15px;
+}
+
+.amount{
+font-size:36px;
+font-weight:900;
+margin-top:4px;
+}
+
+.price-body{
+padding:22px;
+}
+
+.price-body ul{
+list-style:none;
+display:grid;
+gap:9px;
+font-size:13px;
+color:#53645b;
+}
+
+.price-body li:before{
+content:"✓";
+font-weight:900;
+color:var(--green);
+margin-right:8px;
+}
+
+.promo{
+margin-top:17px;
+padding:13px;
+border-radius:13px;
+background:#fff7d3;
+border:1px solid #f0df94;
+font-size:12px;
+}
+
+.fees{
+margin-top:22px;
+overflow:hidden;
+background:#fff;
+border:1px solid var(--line);
+border-radius:20px;
+}
+
+.fees-title{
+background:var(--green);
+color:#fff;
+padding:18px;
+font-weight:900;
+}
+
+.fee-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.fee{
+display:flex;
+justify-content:space-between;
+padding:12px 16px;
+border-bottom:1px solid #edf2ed;
+font-size:13px;
+}
+
+.fee b{
+color:var(--green);
+}
+
+.note{
+padding:13px 16px;
+font-size:10px;
+color:#758078;
+background:#fbfdfb;
+}
+
+/* =========================
+   OFERTA
+========================= */
+
+.offers{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.offer{
+display:flex;
+gap:13px;
+padding:17px;
+border:1px solid var(--line);
+border-radius:16px;
+margin-bottom:11px;
+background:#fff;
+transition:.25s;
+}
+
+.offer:hover{
+transform:translateY(-3px);
+box-shadow:var(--shadow);
+}
+
+.check{
+width:34px;
+height:34px;
+min-width:34px;
+border-radius:50%;
+background:#e6f4dc;
+color:var(--green);
+display:grid;
+place-items:center;
+font-weight:900;
+}
+
+.offer b{
+font-size:14px;
+}
+
+.offer p{
+margin-top:3px;
+font-size:11px;
+color:var(--muted);
+}
+
+.green-box{
+min-height:370px;
+border-radius:25px;
+padding:34px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+overflow:hidden;
+position:relative;
+color:#fff;
+background:
+linear-gradient(145deg,rgba(6,62,30,.95),rgba(11,122,57,.82)),
+url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80")
+center/cover;
+box-shadow:var(--shadow);
+}
+
+.green-box h3{
+font-family:"Playfair Display",serif;
+font-size:32px;
+line-height:1.1;
+margin-bottom:10px;
+}
+
+.green-box p{
+font-size:13px;
+color:#e0eee2;
+margin-bottom:15px;
+}
+
+/* =========================
+   VISUAIS
+========================= */
+
+.visual-section{
+background:#fff;
+}
+
+.visual-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.visual{
+height:360px;
+border-radius:22px;
+overflow:hidden;
+position:relative;
+box-shadow:var(--shadow);
+background:#ddd;
+}
+
+.visual img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.visual:hover img{
+transform:scale(1.06);
+}
+
+.visual-content{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:25px 20px 20px;
+background:linear-gradient(transparent,rgba(4,42,22,.92));
+color:#fff;
+}
+
+.visual-content h3{
+font-size:20px;
+margin-bottom:3px;
+}
+
+.visual-content p{
+font-size:11px;
+color:#e3eee5;
+}
+
+/* =========================
+   DESTAQUE VISUAL
+========================= */
+
+.about-visual{
+background:var(--bg);
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.about-image{
+position:relative;
+}
+
+.about-image img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:var(--shadow);
+}
+
+.about-label{
+position:absolute;
+bottom:25px;
+left:25px;
+right:25px;
+background:#fff;
+border-radius:16px;
+padding:17px;
+box-shadow:var(--shadow);
+}
+
+.about-label b{
+display:block;
+color:var(--green);
+}
+
+.about-label span{
+font-size:11px;
+color:var(--muted);
+}
+
+.about-points{
+display:grid;
+gap:13px;
+margin-top:25px;
+}
+
+.about-point{
+display:flex;
+gap:12px;
+align-items:flex-start;
+}
+
+.about-icon{
+width:40px;
+height:40px;
+border-radius:12px;
+background:#e6f4dc;
+color:var(--green);
+display:grid;
+place-items:center;
+min-width:40px;
+}
+
+.about-point b{
+font-size:14px;
+}
+
+.about-point p{
+font-size:11px;
+color:var(--muted);
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.gallery{
+background:#f8fbf7;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr 1fr;
+gap:13px;
+}
+
+.gallery-item{
+border:0;
+padding:0;
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+background:#fff;
+box-shadow:var(--shadow);
+min-height:260px;
+}
+
+.gallery-item:first-child{
+grid-row:span 2;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+min-height:260px;
+object-fit:cover;
+display:block;
+transition:.4s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.04);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-grid{
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:25px;
+}
+
+.contact-card{
+display:flex;
+gap:13px;
+padding:17px;
+margin-bottom:11px;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+box-shadow:0 10px 30px rgba(5,70,30,.05);
+}
+
+.ico{
+width:42px;
+height:42px;
+min-width:42px;
+border-radius:12px;
+background:#e8f5df;
+color:var(--green);
+display:grid;
+place-items:center;
+}
+
+.contact-card b{
+display:block;
+}
+
+.contact-card span{
+font-size:11px;
+color:var(--muted);
+}
+
+.map{
+margin-top:15px;
+padding:22px;
+text-align:center;
+background:#edf7e9;
+border:1px solid var(--line);
+border-radius:18px;
+}
+
+.map b{
+color:var(--green);
+font-size:13px;
+}
+
+.map p{
+font-size:11px;
+color:var(--muted);
+margin:7px 0 13px;
+}
+
+.form{
+padding:25px;
+background:var(--bg);
+border:1px solid var(--line);
+border-radius:22px;
+}
+
+.form h3{
+margin-bottom:3px;
+}
+
+.form-intro{
+font-size:12px;
+color:var(--muted);
+margin-bottom:18px;
+}
+
+.fields{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.field{
+display:grid;
+gap:5px;
+}
+
+.field.full{
+grid-column:1/-1;
+}
+
+.field label{
+font-size:10px;
+font-weight:900;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+border:1px solid #d4e2d3;
+border-radius:11px;
+padding:11px 12px;
+background:#fff;
+outline:none;
+}
+
+.field textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:var(--green);
+box-shadow:0 0 0 3px rgba(7,91,42,.08);
+}
+
+.form .btn{
+width:100%;
+margin-top:13px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+background:var(--bg);
+}
+
+.faq-item{
+overflow:hidden;
+margin-bottom:9px;
+border:1px solid var(--line);
+border-radius:16px;
+}
+
+.faq-q{
+width:100%;
+padding:17px;
+border:0;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-weight:800;
+text-align:left;
+cursor:pointer;
+}
+
+.faq-q span{
+font-size:20px;
+color:var(--green);
+}
+
+.faq-a{
+display:none;
+padding:0 17px 17px;
+font-size:12px;
+color:var(--muted);
+background:#fff;
+}
+
+.faq-item.open .faq-a{
+display:block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:var(--green3);
+color:#bcd2c0;
+padding:45px 0 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.3fr 1fr 1fr;
+gap:35px;
+}
+
+footer h4{
+color:#fff;
+margin-bottom:11px;
+}
+
+footer p,
+footer a,
+footer span{
+font-size:11px;
+color:#bcd2c0;
+}
+
+.footer-links{
+display:grid;
+gap:7px;
+}
+
+.copyright{
+border-top:1px solid rgba(255,255,255,.08);
+margin-top:30px;
+padding-top:16px;
+display:flex;
+justify-content:space-between;
+font-size:10px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:150;
+width:59px;
+height:59px;
+border-radius:50%;
+background:#25d366;
+color:#063e1e;
+display:grid;
+place-items:center;
+font-size:28px;
+border:4px solid #fff;
+box-shadow:0 12px 35px rgba(0,0,0,.2);
+transition:.25s;
+}
+
+.whatsapp:hover{
+transform:scale(1.08);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.to-top{
+position:fixed;
+right:20px;
+bottom:90px;
+display:none;
+width:41px;
+height:41px;
+border:1px solid var(--line);
+background:#fff;
+color:var(--green);
+border-radius:11px;
+cursor:pointer;
+z-index:100;
+font-weight:900;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+position:fixed;
+inset:0;
+z-index:300;
+background:rgba(0,35,18,.82);
+display:none;
+align-items:center;
+justify-content:center;
+padding:15px;
+}
+
+.modal.open{
+display:flex;
+}
+
+.modal-box{
+position:relative;
+background:#fff;
+padding:10px;
+border-radius:20px;
+max-width:900px;
+max-height:90vh;
+}
+
+.modal-box img{
+max-width:100%;
+max-height:82vh;
+display:block;
+border-radius:12px;
+}
+
+.close{
+position:absolute;
+right:12px;
+top:12px;
+width:36px;
+height:36px;
+border:0;
+border-radius:10px;
+background:#fff;
+color:var(--green);
+font-size:22px;
+cursor:pointer;
+z-index:2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:76px;
+left:16px;
+right:16px;
+background:#fff;
+padding:13px;
+border:1px solid var(--line);
+border-radius:17px;
+box-shadow:var(--shadow);
+flex-direction:column;
+align-items:stretch;
+}
+
+.nav-links.open{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+.hero .wrap,
+.about-grid,
+.contact-grid,
+.offers{
+grid-template-columns:1fr;
+}
+
+.hero .wrap{
+padding:48px 0;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+margin-top:0;
+padding-top:18px;
+}
+
+.prices{
+grid-template-columns:1fr;
+}
+
+.visual-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.topbar .phone{
+display:none;
+}
+
+.topbar .wrap{
+justify-content:center;
+text-align:center;
+}
+
+.brand-name{
+font-size:13px;
+}
+
+.brand-sub{
+font-size:7px;
+}
+
+.hero h1{
+font-size:43px;
+}
+
+.hero-photo img{
+height:340px;
+}
+
+.hero-card{
+left:8px;
+bottom:-22px;
+width:220px;
+}
+
+.hero-badge{
+right:7px;
+top:15px;
+}
+
+.stats,
+.fee-grid,
+.fields,
+.visual-grid,
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-item:first-child{
+grid-row:auto;
+}
+
+.gallery-item img,
+.gallery-item{
+min-height:300px;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+.about-image img{
+height:380px;
+}
+
+.copyright{
+display:block;
+}
+
+.copyright span{
+display:block;
+margin-top:5px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ======================================================
+     TOPO
+====================================================== -->
+
+<div class="topbar">
+<div class="wrap">
+
+<span>
+📚 Ano Lectivo <strong>2026/2027</strong> • Matrículas abertas
+</span>
+
+<span class="phone">
+📞 +244 947 618 194 &nbsp; | &nbsp; +244 951 670 113
+</span>
+
+</div>
+</div>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+<div class="wrap nav">
+
+<a href="#inicio" class="brand">
+
+<div class="logo">
+
+<svg viewBox="0 0 100 100" fill="none">
+
+<circle cx="50" cy="50" r="46" fill="#075b2a"/>
+
+<path
+d="M26 65C39 56 48 44 54 27C58 40 68 48 77 53C70 65 60 74 48 78C39 81 31 75 26 65Z"
+fill="#8fcf27"/>
+
+<path
+d="M50 70C54 57 63 45 76 38"
+stroke="#fff"
+stroke-width="4"
+stroke-linecap="round"/>
+
+<path
+d="M37 69C41 60 46 51 53 43"
+stroke="#fff"
+stroke-width="3"
+stroke-linecap="round"/>
+
+</svg>
+
+</div>
+
+<div>
+<div class="brand-name">COLÉGIO RAMO VERDE</div>
+<div class="brand-sub">EDUCAÇÃO • DISCIPLINA • FUTURO</div>
+</div>
+
+</a>
+
+
+<button class="menu" id="menu">☰</button>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#inicio">Início</a>
+<a href="#matriculas">Matrículas</a>
+<a href="#oferta">O que oferecemos</a>
+<a href="#recursos">Ambiente</a>
+<a href="#galeria">Galeria</a>
+<a href="#contacto">Contacto</a>
+
+<a href="#matriculas" class="nav-cta">
+Garantir vaga
+</a>
+
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero" id="inicio">
+
+<div class="wrap">
+
+<div>
+
+<span class="tag">
+● MATRÍCULAS 2026/2027
+</span>
+
+<h1>
+Educar hoje.<br>
+<span>Transformar</span> o amanhã.
+</h1>
+
+<p class="hero-text">
+Educação, disciplina e acompanhamento para contribuir
+para o desenvolvimento dos alunos durante o Ano Lectivo
+2026/2027.
+</p>
+
+<div class="buttons">
+
+<a href="#matriculas" class="btn primary">
+🎓 Ver matrículas
+</a>
+
+<a
+href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
+target="_blank"
+class="btn secondary">
+
+💬 Falar no WhatsApp
+
+</a>
+
+</div>
+
+<p class="hero-location">
+📍 <strong>Viana – Estalagem KM 12 B, Bairro Novo</strong>
+</p>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="hero-photo">
+
+<img
+src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=85"
+alt="Ambiente escolar e sala de aula"
+loading="eager"
+>
+
+</div>
+
+
+<div class="hero-badge">
+🎓 ANO LECTIVO
+<strong>2026/2027</strong>
+</div>
+
+
+<div class="hero-card">
+
+🎁
+
+<strong>Promoção especial</strong>
+
+Os primeiros 20 alunos que efectuarem a matrícula
+terão <b>50% de desconto</b> no valor da matrícula.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     ESTATÍSTICAS
+====================================================== -->
+
+<div class="wrap">
+
+<div class="stats">
+
+<div class="stat">
+<b>Pré–5.ª</b>
+<span>Iniciação até à 5.ª classe</span>
+</div>
+
+<div class="stat">
+<b>6.ª–9.ª</b>
+<span>Ensino até à 9.ª classe</span>
+</div>
+
+<div class="stat">
+<b>5.000 Kz</b>
+<span>Pré–5.ª • matrícula/confirm.</span>
+</div>
+
+<div class="stat">
+<b>5.500 Kz</b>
+<span>6.ª–9.ª • matrícula/confirm.</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ======================================================
+     MATRÍCULAS
+====================================================== -->
+
+<section id="matriculas">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>Matrículas e confirmações</small>
+
+<h2>
+Garanta a vaga do seu filho.
+</h2>
+
+<p>
+Condições publicadas pelo Colégio Ramo Verde para
+o Ano Lectivo 2026/2027.
+</p>
+
+</div>
+
+
+<div class="prices">
+
+
+<article class="price">
+
+<div class="price-top">
+
+<h3>
+INICIAÇÃO À 5.ª CLASSE
+</h3>
+
+<div class="amount">
+5.000 Kz
+</div>
+
+</div>
+
+
+<div class="price-body">
+
+<ul>
+
+<li>Matrícula/Confirmação — 1.000 Kz</li>
+<li>Cartão de Estudante — 1.500 Kz</li>
+<li>Porta-passe — 200 Kz</li>
+<li>Boletim — 200 Kz</li>
+<li>Mica — 100 Kz</li>
+<li>Carimbo da Bata — 2.000 Kz</li>
+
+</ul>
+
+
+<div class="promo">
+
+🎁 Primeiros 20 alunos:
+<strong>50% de desconto</strong>
+no valor da matrícula.
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<article class="price">
+
+<div class="price-top">
+
+<h3>
+6.ª À 9.ª CLASSE
+</h3>
+
+<div class="amount">
+5.500 Kz
+</div>
+
+</div>
+
+
+<div class="price-body">
+
+<ul>
+
+<li>Matrícula/Confirmação — 1.500 Kz</li>
+<li>Cartão de Estudante — 1.500 Kz</li>
+<li>Porta-passe — 200 Kz</li>
+<li>Boletim — 200 Kz</li>
+<li>Mica — 100 Kz</li>
+<li>Carimbo da Bata — 2.000 Kz</li>
+
+</ul>
+
+
+<div class="promo">
+
+🎁 Primeiros 20 alunos:
+<strong>50% de desconto</strong>
+no valor da matrícula.
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+
+<!-- PROPINAS -->
+
+<div class="fees">
+
+<div class="fees-title">
+💳 Propinas mensais — Ano Lectivo 2026/2027
+</div>
+
+
+<div class="fee-grid">
+
+<div class="fee">
+Pré <b>2.000 Kz</b>
+</div>
+
+<div class="fee">
+1.ª classe <b>2.300 Kz</b>
+</div>
+
+<div class="fee">
+2.ª classe <b>2.500 Kz</b>
+</div>
+
+<div class="fee">
+3.ª classe <b>2.800 Kz</b>
+</div>
+
+<div class="fee">
+4.ª classe <b>3.000 Kz</b>
+</div>
+
+<div class="fee">
+5.ª classe <b>3.500 Kz</b>
+</div>
+
+<div class="fee">
+6.ª classe <b>4.000 Kz</b>
+</div>
+
+<div class="fee">
+7.ª classe <b>4.000 Kz</b>
+</div>
+
+<div class="fee">
+8.ª classe <b>4.000 Kz</b>
+</div>
+
+<div class="fee">
+9.ª classe <b>4.000 Kz</b>
+</div>
+
+</div>
+
+
+<div class="note">
+
+Valores apresentados de acordo com as informações
+existentes neste material. Confirme valores, vagas e
+condições directamente com a secretaria.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     OFERTA
+====================================================== -->
+
+<section id="oferta">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>O que oferecemos</small>
+
+<h2>
+Educação com disciplina e acompanhamento.
+</h2>
+
+<p>
+Características e serviços apresentados nas informações
+institucionais utilizadas neste website.
+</p>
+
+</div>
+
+
+<div class="offers">
+
+
+<div>
+
+<div class="offer">
+
+<div class="check">✓</div>
+
+<div>
+
+<b>
+Professores qualificados e experientes.
+</b>
+
+<p>
+Equipa orientada para o processo de aprendizagem.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="offer">
+
+<div class="check">✓</div>
+
+<div>
+
+<b>
+Retiro pedagógico e formativo.
+</b>
+
+<p>
+Actividades de carácter pedagógico e formativo.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="offer">
+
+<div class="check">✓</div>
+
+<div>
+
+<b>
+Diversas actividades extracurriculares educativas.
+</b>
+
+<p>
+Experiências educativas para complementar a formação.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="offer">
+
+<div class="check">✓</div>
+
+<div>
+
+<b>
+Ensino de qualidade, disciplina e acompanhamento personalizado.
+</b>
+
+<p>
+Compromisso apresentado pela instituição.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="green-box">
+
+<h3>
+Ramo Verde,
+onde aprender é crescer.
+</h3>
+
+<p>
+“Educação • Disciplina • Futuro” é a identidade
+apresentada nas informações do colégio.
+</p>
+
+<strong>
+INVISTA NO FUTURO DO SEU FILHO
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     RECURSOS VISUAIS
+====================================================== -->
+
+<section class="visual-section" id="recursos">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>Ambiente escolar</small>
+
+<h2>
+Aprender também é viver experiências.
+</h2>
+
+<p>
+Recursos visuais ilustrativos utilizados para dar ao website
+uma apresentação moderna e profissional.
+</p>
+
+</div>
+
+
+<div class="visual-grid">
+
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
+alt="Professor durante actividade de aprendizagem"
+loading="lazy"
+>
+
+<div class="visual-content">
+
+<h3>
+Aprendizagem
+</h3>
+
+<p>
+Um ambiente que valoriza o ensino e a participação dos alunos.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+alt="Alunos em ambiente escolar"
+loading="lazy"
+>
+
+<div class="visual-content">
+
+<h3>
+Desenvolvimento
+</h3>
+
+<p>
+Educação para preparar os alunos para novos desafios.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
+alt="Livros e aprendizagem"
+loading="lazy"
+>
+
+<div class="visual-content">
+
+<h3>
+Conhecimento
+</h3>
+
+<p>
+O conhecimento como parte essencial da formação.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SECÇÃO INSTITUCIONAL VISUAL
+====================================================== -->
+
+<section class="about-visual">
+
+<div class="wrap">
+
+<div class="about-grid">
+
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80"
+alt="Ambiente educativo"
+loading="lazy"
+>
+
+<div class="about-label">
+
+<b>
+Educação • Disciplina • Futuro
+</b>
+
+<span>
+Uma apresentação digital moderna do Colégio Ramo Verde.
+</span>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="section-head">
+
+<small>
+Uma educação que acompanha
+</small>
+
+<h2>
+Formar para o presente e para o futuro.
+</h2>
+
+<p>
+O Colégio Ramo Verde apresenta uma proposta baseada
+em educação, disciplina e acompanhamento.
+</p>
+
+</div>
+
+
+<div class="about-points">
+
+
+<div class="about-point">
+
+<div class="about-icon">
+🎓
+</div>
+
+<div>
+
+<b>
+Formação escolar
+</b>
+
+<p>
+Classes abrangidas do Pré à 9.ª classe.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="about-point">
+
+<div class="about-icon">
+👨‍🏫
+</div>
+
+<div>
+
+<b>
+Professores
+</b>
+
+<p>
+Professores qualificados e experientes.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="about-point">
+
+<div class="about-icon">
+📚
+</div>
+
+<div>
+
+<b>
+Actividades educativas
+</b>
+
+<p>
+Actividades extracurriculares educativas.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="about-point">
+
+<div class="about-icon">
+🌱
+</div>
+
+<div>
+
+<b>
+Acompanhamento
+</b>
+
+<p>
+Disciplina e acompanhamento personalizado.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     GALERIA
+====================================================== -->
+
+<section class="gallery" id="galeria">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>Galeria visual</small>
+
+<h2>
+Um website com presença visual.
+</h2>
+
+<p>
+Imagens ilustrativas de educação e ambiente escolar.
+Elas não são apresentadas como fotografias oficiais
+do Colégio Ramo Verde.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<button
+class="gallery-item"
+data-image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=90"
+>
+
+<img
+src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+alt="Sala de aula"
+loading="lazy"
+>
+
+</button>
+
+
+<button
+class="gallery-item"
+data-image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=90"
+>
+
+<img
+src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
+alt="Professor e alunos"
+loading="lazy"
+>
+
+</button>
+
+
+<button
+class="gallery-item"
+data-image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=90"
+>
+
+<img
+src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+alt="Alunos"
+loading="lazy"
+>
+
+</button>
+
+
+<button
+class="gallery-item"
+data-image="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=90"
+>
+
+<img
+src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
+alt="Livros e educação"
+loading="lazy"
+>
+
+</button>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACTO
+====================================================== -->
+
+<section id="contacto">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>Contacto e matrícula</small>
+
+<h2>
+Fale directamente com o colégio.
+</h2>
+
+<p>
+Preencha o formulário e envie o pedido directamente
+pelo WhatsApp.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div>
+
+
+<a
+class="contact-card"
+href="tel:+244947618194"
+>
+
+<div class="ico">☎</div>
+
+<div>
+
+<b>
++244 947 618 194
+</b>
+
+<span>
+Contacto
+</span>
+
+</div>
+
+</a>
+
+
+<a
+class="contact-card"
+href="tel:+244951670113"
+>
+
+<div class="ico">☎</div>
+
+<div>
+
+<b>
++244 951 670 113
+</b>
+
+<span>
+Contacto
+</span>
+
+</div>
+
+</a>
+
+
+<a
+class="contact-card"
+href="https://wa.me/244947618194"
+target="_blank"
+>
+
+<div class="ico">💬</div>
+
+<div>
+
+<b>
+WhatsApp
+</b>
+
+<span>
+Matrículas, propinas, vagas e informações
+</span>
+
+</div>
+
+</a>
+
+
+<div class="map">
+
+<b>
+📍 Viana – Estalagem KM 12 B, Bairro Novo
+</b>
+
+<p>
+Localização apresentada nas informações fornecidas.
+</p>
+
+<a
+class="btn secondary"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Col%C3%A9gio%20Ramo%20Verde%20Viana%20Estalagem%20KM%2012%20B%20Bairro%20Novo%20Angola"
+>
+
+Abrir Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FORMULÁRIO -->
+
+<form class="form" id="contactForm">
+
+<h3>
+Pedido de informação / matrícula
+</h3>
+
+<p class="form-intro">
+Preencha os dados e o WhatsApp será aberto
+com uma mensagem pronta.
+</p>
+
+
+<div class="fields">
+
+
+<div class="field">
+
+<label>
+Nome do encarregado
+</label>
+
+<input
+id="nome"
+type="text"
+placeholder="Seu nome"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Telefone
+</label>
+
+<input
+id="telefone"
+type="tel"
+placeholder="+244..."
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Classe pretendida
+</label>
+
+<select id="classe" required>
+
+<option value="">
+Selecione
+</option>
+
+<option>Pré</option>
+<option>1.ª classe</option>
+<option>2.ª classe</option>
+<option>3.ª classe</option>
+<option>4.ª classe</option>
+<option>5.ª classe</option>
+<option>6.ª classe</option>
+<option>7.ª classe</option>
+<option>8.ª classe</option>
+<option>9.ª classe</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Assunto
+</label>
+
+<select id="assunto">
+
+<option>Matrícula</option>
+<option>Confirmação</option>
+<option>Propinas</option>
+<option>Vagas</option>
+<option>Outras informações</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Mensagem
+</label>
+
+<textarea
+id="mensagem"
+placeholder="Escreva a sua dúvida..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn primary"
+>
+
+💬 Enviar pelo WhatsApp
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+
+<section class="faq">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<small>Perguntas frequentes</small>
+
+<h2>
+Informações rápidas.
+</h2>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Qual é o ano lectivo?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-a">
+
+2026/2027.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Que classes estão abrangidas?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-a">
+
+Pré até à 5.ª classe e 6.ª até à 9.ª classe.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Existe promoção?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-a">
+
+Sim. A informação apresentada indica 50% de desconto
+no valor da matrícula para os primeiros 20 alunos
+que efectuarem a matrícula.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Como confirmar os valores e vagas?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-a">
+
+Contacte +244 947 618 194 ou +244 951 670 113,
+ou utilize o WhatsApp.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+<div class="wrap">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h4>
+COLÉGIO RAMO VERDE
+</h4>
+
+<p>
+Educação • Disciplina • Futuro
+</p>
+
+<p>
+Educar hoje, transformar o amanhã.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Navegação
+</h4>
+
+<div class="footer-links">
+
+<a href="#inicio">
+Início
+</a>
+
+<a href="#matriculas">
+Matrículas
+</a>
+
+<a href="#oferta">
+O que oferecemos
+</a>
+
+<a href="#galeria">
+Galeria
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>
+Contacto
+</h4>
+
+<div class="footer-links">
+
+<a href="tel:+244947618194">
++244 947 618 194
+</a>
+
+<a href="tel:+244951670113">
++244 951 670 113
+</a>
+
+<a href="https://wa.me/244947618194">
+WhatsApp
+</a>
+
+<span>
+Viana – Estalagem KM 12 B, Bairro Novo
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+<span>
+© 2026 Colégio Ramo Verde
+</span>
+
+<span>
+Educação • Disciplina • Futuro
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ======================================================
+     WHATSAPP
+====================================================== -->
+
+<a
+class="whatsapp"
+href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
+target="_blank"
+aria-label="Falar com o Colégio Ramo Verde pelo WhatsApp"
+>
+💬
+</a>
+
+
+<!-- BOTÃO TOPO -->
+
+<button
+class="to-top"
+id="toTop"
+aria-label="Voltar ao topo"
+>
+↑
+</button>
+
+
+<!-- MODAL DA GALERIA -->
+
+<div class="modal" id="imageModal">
+
+<div class="modal-box">
+
+<button
+class="close"
+id="closeModal"
+>
+×
+</button>
+
+<img
+id="modalImage"
+src=""
+alt="Imagem ampliada"
+>
+
+</div>
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* MENU MOBILE */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+navLinks.classList.toggle("open");
+});
+
+
+navLinks.querySelectorAll("a").forEach(link => {
+
+link.addEventListener("click", () => {
+navLinks.classList.remove("open");
+});
+
+});
+
+
+/* FAQ */
+
+document.querySelectorAll(".faq-q").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const item = button.parentElement;
+
+item.classList.toggle("open");
+
+const icon = button.querySelector("span");
+
+icon.textContent =
+item.classList.contains("open") ? "−" : "+";
+
+});
+
+});
+
+
+/* GALERIA / MODAL */
+
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll(".gallery-item").forEach(item => {
+
+item.addEventListener("click", () => {
+
+modalImage.src = item.dataset.image;
+
+modal.classList.add("open");
+
+});
+
+});
+
+
+closeModal.addEventListener("click", () => {
+
+modal.classList.remove("open");
+
+modalImage.src = "";
+
+});
+
+
+modal.addEventListener("click", event => {
+
+if(event.target === modal){
+
+modal.classList.remove("open");
+
+modalImage.src = "";
+
+}
+
+});
+
+
+/* FECHAR MODAL COM ESC */
+
+document.addEventListener("keydown", event => {
+
+if(event.key === "Escape"){
+
+modal.classList.remove("open");
+
+modalImage.src = "";
+
+}
+
+});
+
+
+/* FORMULÁRIO WHATSAPP */
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", event => {
+
+event.preventDefault();
+
+const nome =
+document.getElementById("nome").value.trim();
+
+const telefone =
+document.getElementById("telefone").value.trim();
+
+const classe =
+document.getElementById("classe").value;
+
+const assunto =
+document.getElementById("assunto").value;
+
+const mensagem =
+document.getElementById("mensagem").value.trim();
+
+
+const texto =
+`Olá Colégio Ramo Verde!
+
+Gostaria de obter informações sobre o Ano Lectivo 2026/2027.
+
+Nome do encarregado: ${nome}
+Telefone: ${telefone}
+Classe pretendida: ${classe}
+Assunto: ${assunto}
+
+Mensagem:
+${mensagem || "Gostaria de receber mais informações, por favor."}`;
+
+
+const url =
+"https://wa.me/244947618194?text=" +
+encodeURIComponent(texto);
+
+
+window.open(url,"_blank");
+
+});
+
+
+/* BOTÃO VOLTAR AO TOPO */
+
+const topButton =
+document.getElementById("toTop");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 500){
+
+topButton.style.display = "block";
+
+}else{
+
+topButton.style.display = "none";
+
+}
+
+});
+
+
+topButton.addEventListener("click", () => {
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+
+/* ANIMAÇÃO SUAVE */
+
+const observer =
+new IntersectionObserver(
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = "1";
+entry.target.style.transform =
+"translateY(0)";
+
+}
+
+});
+
+},
+{
+threshold:.12
+}
+);
+
+
+document.querySelectorAll(
+".stat,.offer,.visual,.price,.contact-card,.about-image"
+).forEach(element => {
+
+element.style.opacity = "0";
+element.style.transform = "translateY(18px)";
+element.style.transition =
+"opacity .6s ease, transform .6s ease";
+
+observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
