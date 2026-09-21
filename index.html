@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-AO">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="theme-color" content="#075b2a">
-<meta name="description" content="Colégio Ramo Verde — Educação, Disciplina e Futuro. Matrículas 2026/2027.">
+<meta name="description" content="Colégio Ramo Verde — Educação, Disciplina e Futuro. Matrículas abertas para o Ano Lectivo 2026/2027.">
+<meta name="author" content="Colégio Ramo Verde">
 
 <title>Colégio Ramo Verde | Educação • Disciplina • Futuro</title>
 
@@ -15,130 +15,97 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
-
 <style>
 
 /* =========================================================
-   VARIÁVEIS
+   BASE
 ========================================================= */
 
 :root{
+    --green:#075b2a;
+    --green-dark:#043b1b;
+    --green-light:#0b7a39;
+    --lime:#8fcf27;
+    --gold:#d8ad42;
 
---green:#075b2a;
---green2:#0b7a39;
---green3:#063e1e;
---lime:#8fcf27;
---lime2:#b4df58;
+    --cream:#f6faf3;
+    --soft:#edf6e9;
+    --ink:#11291b;
+    --muted:#64736a;
+    --white:#ffffff;
 
---gold:#d8ad42;
+    --line:#dce8dc;
 
---bg:#f5faf2;
---bg2:#edf7e9;
+    --shadow:0 22px 65px rgba(4,59,27,.12);
+    --shadow-soft:0 12px 35px rgba(4,59,27,.08);
 
---ink:#12301f;
---muted:#64756b;
-
---line:#dce8dc;
-
---white:#ffffff;
-
---shadow:
-0 20px 60px rgba(5,70,30,.12);
-
---shadow-soft:
-0 12px 35px rgba(5,70,30,.08);
-
+    --radius:22px;
 }
 
-
-/* =========================================================
-   RESET
-========================================================= */
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
-scroll-padding-top:90px;
+    scroll-behavior:smooth;
 }
 
 body{
-
-font-family:"DM Sans",sans-serif;
-
-color:var(--ink);
-
-background:#fff;
-
-line-height:1.6;
-
-overflow-x:hidden;
-
+    font-family:"DM Sans",sans-serif;
+    color:var(--ink);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
 img{
-max-width:100%;
+    max-width:100%;
 }
 
 button,
 input,
 select,
 textarea{
-font:inherit;
+    font:inherit;
 }
 
 button{
-cursor:pointer;
+    cursor:pointer;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .wrap{
-
-width:min(1160px,calc(100% - 32px));
-
-margin:auto;
-
+    width:min(1180px,calc(100% - 34px));
+    margin:auto;
 }
 
 
 /* =========================================================
-   BARRA SUPERIOR
+   TOP BAR
 ========================================================= */
 
 .topbar{
-
-background:var(--green3);
-
-color:#fff;
-
-font-size:12px;
-
+    background:var(--green-dark);
+    color:#dcebdd;
+    font-size:12px;
 }
 
 .topbar .wrap{
-
-min-height:39px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:20px;
-
+    min-height:38px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
 .topbar strong{
-color:var(--lime2);
+    color:#fff;
 }
 
 
@@ -147,163 +114,101 @@ color:var(--lime2);
 ========================================================= */
 
 header{
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-position:sticky;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(16px);
 
-top:0;
-
-z-index:100;
-
-background:rgba(255,255,255,.96);
-
-backdrop-filter:blur(15px);
-
--webkit-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(7,91,42,.1);
-
+    border-bottom:1px solid rgba(7,91,42,.10);
 }
 
 .nav{
+    height:78px;
 
-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:20px;
-
+    gap:20px;
 }
 
 .brand{
-
-display:flex;
-
-align-items:center;
-
-gap:11px;
-
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo{
+.brand-logo{
+    width:56px;
+    height:56px;
 
-width:57px;
+    object-fit:cover;
+    border-radius:50%;
 
-height:57px;
-
-border-radius:50%;
-
-background:#fff;
-
-border:2px solid var(--green);
-
-padding:3px;
-
-display:grid;
-
-place-items:center;
-
-overflow:hidden;
-
-box-shadow:0 7px 20px rgba(7,91,42,.15);
-
-}
-
-.logo img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-border-radius:50%;
-
+    box-shadow:0 8px 24px rgba(7,91,42,.18);
 }
 
 .brand-name{
-
-font-weight:900;
-
-font-size:16px;
-
-color:var(--green);
-
+    color:var(--green);
+    font-size:15px;
+    font-weight:900;
+    line-height:1.1;
 }
 
 .brand-sub{
+    margin-top:3px;
 
-font-size:8px;
+    color:#748078;
+    font-size:8px;
+    font-weight:800;
 
-font-weight:800;
-
-letter-spacing:1.2px;
-
-color:#718077;
-
+    letter-spacing:1.3px;
 }
 
 .nav-links{
+    display:flex;
+    align-items:center;
+    gap:21px;
 
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-font-size:13px;
-
-font-weight:800;
-
+    font-size:12px;
+    font-weight:800;
 }
 
 .nav-links a{
-
-transition:.25s;
-
+    transition:.2s;
 }
 
 .nav-links a:hover{
-
-color:var(--green2);
-
+    color:var(--green-light);
 }
 
 .nav-cta{
+    color:#fff!important;
 
-background:var(--green);
+    background:var(--green);
 
-color:#fff!important;
+    padding:12px 17px;
 
-padding:11px 16px;
+    border-radius:12px;
 
-border-radius:12px;
-
-box-shadow:0 8px 20px rgba(7,91,42,.15);
-
+    box-shadow:0 9px 24px rgba(7,91,42,.18);
 }
 
 .menu{
+    display:none;
 
-display:none;
+    width:44px;
+    height:44px;
 
-border:0;
+    border:0;
+    border-radius:12px;
 
-background:#edf6eb;
+    background:#edf6e9;
+    color:var(--green);
 
-color:var(--green);
-
-font-size:23px;
-
-width:44px;
-
-height:44px;
-
-border-radius:12px;
-
+    font-size:22px;
 }
 
 
@@ -312,467 +217,366 @@ border-radius:12px;
 ========================================================= */
 
 .hero{
+    position:relative;
+    overflow:hidden;
 
-position:relative;
-
-overflow:hidden;
-
-background:
-
-linear-gradient(
-135deg,
-#edf8e9 0%,
-#ffffff 53%,
-#f0f9e9 100%
-);
-
+    background:
+        linear-gradient(
+            135deg,
+            #edf8e8 0%,
+            #ffffff 48%,
+            #f0f8ea 100%
+        );
 }
 
-.hero:before{
+.hero::before{
+    content:"";
 
-content:"";
+    position:absolute;
 
-position:absolute;
+    width:650px;
+    height:650px;
 
-width:550px;
+    right:-280px;
+    top:-310px;
 
-height:550px;
+    border-radius:50%;
 
-border-radius:50%;
-
-background:rgba(143,207,39,.11);
-
-right:-220px;
-
-top:-230px;
-
+    background:rgba(143,207,39,.12);
 }
 
-.hero:after{
+.hero::after{
+    content:"";
 
-content:"";
+    position:absolute;
 
-position:absolute;
+    width:300px;
+    height:300px;
 
-width:220px;
+    left:-190px;
+    bottom:-190px;
 
-height:220px;
+    border-radius:50%;
 
-border-radius:50%;
-
-background:rgba(7,91,42,.045);
-
-left:-100px;
-
-bottom:-100px;
-
+    background:rgba(7,91,42,.06);
 }
 
 .hero .wrap{
+    position:relative;
+    z-index:2;
 
-position:relative;
+    min-height:670px;
 
-z-index:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-min-height:650px;
+    gap:60px;
 
-display:grid;
+    align-items:center;
 
-grid-template-columns:1fr 1fr;
+    padding:70px 0;
+}
 
-gap:55px;
-
-align-items:center;
-
-padding:68px 0;
-
+.hero-content{
+    position:relative;
+    z-index:2;
 }
 
 .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
 
-display:inline-flex;
+    padding:8px 13px;
 
-align-items:center;
+    border-radius:50px;
 
-gap:7px;
+    background:#e0f0d8;
+    color:var(--green);
 
-background:#e0f0d8;
+    font-size:10px;
+    font-weight:900;
 
-color:var(--green);
-
-padding:8px 14px;
-
-border-radius:50px;
-
-font-size:11px;
-
-font-weight:900;
-
-text-transform:uppercase;
-
+    letter-spacing:.5px;
 }
 
-.tag-dot{
-
-width:7px;
-
-height:7px;
-
-background:var(--lime);
-
-border-radius:50%;
-
-box-shadow:0 0 0 5px rgba(143,207,39,.15);
-
+.tag::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--lime);
 }
 
 .hero h1{
+    max-width:690px;
 
-font-family:"Playfair Display",serif;
+    margin:20px 0 18px;
 
-font-size:clamp(43px,6vw,70px);
+    font-family:"Playfair Display",serif;
 
-line-height:1.02;
+    font-size:clamp(45px,6vw,74px);
 
-letter-spacing:-2px;
+    line-height:.99;
 
-margin:18px 0;
-
+    letter-spacing:-2.5px;
 }
 
 .hero h1 span{
-
-color:var(--green);
-
+    color:var(--green);
 }
 
 .hero-text{
+    max-width:610px;
 
-font-size:16px;
+    color:var(--muted);
 
-color:var(--muted);
-
-max-width:610px;
-
+    font-size:16px;
 }
 
 .buttons{
+    display:flex;
+    flex-wrap:wrap;
 
-display:flex;
+    gap:11px;
 
-gap:10px;
-
-flex-wrap:wrap;
-
-margin-top:25px;
-
+    margin-top:27px;
 }
 
 .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
 
-display:inline-flex;
+    min-height:48px;
 
-align-items:center;
+    padding:13px 19px;
 
-justify-content:center;
+    border:0;
+    border-radius:13px;
 
-gap:8px;
+    font-weight:900;
+    font-size:13px;
 
-border:0;
-
-border-radius:13px;
-
-padding:13px 18px;
-
-font-weight:900;
-
-transition:.25s;
-
+    transition:.25s;
 }
 
 .btn:hover{
-
-transform:translateY(-3px);
-
+    transform:translateY(-3px);
 }
 
 .primary{
+    background:var(--green);
+    color:#fff;
 
-background:var(--green);
-
-color:#fff;
-
-box-shadow:0 12px 30px rgba(7,91,42,.2);
-
+    box-shadow:0 13px 30px rgba(7,91,42,.20);
 }
 
 .secondary{
+    background:#fff;
+    color:var(--green);
 
-background:#fff;
-
-color:var(--green);
-
-border:1px solid #cfe0cf;
-
+    border:1px solid #cfe0cf;
 }
 
 .hero-location{
+    margin-top:21px;
 
-margin-top:20px;
+    color:var(--muted);
 
-color:var(--muted);
-
-font-size:13px;
-
+    font-size:12px;
 }
 
-
-/* =========================================================
-   HERO VISUAL
-========================================================= */
-
 .hero-visual{
-
-position:relative;
-
+    position:relative;
 }
 
 .hero-photo{
+    position:relative;
 
-padding:9px;
+    padding:9px;
 
-background:#fff;
+    background:#fff;
 
-border-radius:28px;
+    border-radius:28px;
 
-box-shadow:var(--shadow);
+    box-shadow:var(--shadow);
 
-transform:rotate(1deg);
-
-position:relative;
-
+    transform:rotate(1deg);
 }
 
-.hero-photo:before{
+.hero-photo::after{
+    content:"";
 
-content:"";
+    position:absolute;
+    inset:0;
 
-position:absolute;
+    border-radius:28px;
 
-inset:-8px;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.7);
 
-border:2px solid rgba(143,207,39,.25);
-
-border-radius:31px;
-
-z-index:-1;
-
+    pointer-events:none;
 }
 
 .hero-photo img{
+    display:block;
 
-width:100%;
+    width:100%;
+    height:510px;
 
-height:475px;
+    object-fit:cover;
 
-object-fit:cover;
-
-display:block;
-
-border-radius:20px;
-
-}
-
-.hero-card{
-
-position:absolute;
-
-left:-28px;
-
-bottom:-25px;
-
-background:#fff;
-
-border:1px solid var(--line);
-
-box-shadow:var(--shadow);
-
-border-radius:18px;
-
-padding:16px;
-
-width:270px;
-
-font-size:12px;
-
-}
-
-.hero-card strong{
-
-display:block;
-
-color:var(--green);
-
-font-size:15px;
-
-margin-bottom:3px;
-
+    border-radius:20px;
 }
 
 .hero-badge{
+    position:absolute;
 
-position:absolute;
+    top:30px;
+    right:-15px;
 
-right:-14px;
+    min-width:145px;
 
-top:28px;
+    padding:14px 16px;
 
-background:var(--green);
+    border-radius:16px;
 
-color:#fff;
+    background:var(--green);
+    color:#fff;
 
-padding:14px 17px;
+    box-shadow:var(--shadow);
 
-border-radius:16px;
-
-box-shadow:var(--shadow);
-
-font-size:11px;
-
-font-weight:800;
-
+    font-size:10px;
+    font-weight:800;
 }
 
 .hero-badge strong{
+    display:block;
 
-display:block;
+    margin-top:2px;
 
-font-size:17px;
+    font-size:18px;
+}
 
-color:var(--lime2);
+.hero-card{
+    position:absolute;
 
+    left:-28px;
+    bottom:-27px;
+
+    width:275px;
+
+    padding:18px;
+
+    border:1px solid var(--line);
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    font-size:11px;
+}
+
+.hero-card strong{
+    display:block;
+
+    margin:4px 0;
+
+    color:var(--green);
+
+    font-size:15px;
 }
 
 
 /* =========================================================
-   ESTATÍSTICAS
+   STATS
 ========================================================= */
 
 .stats{
+    position:relative;
+    z-index:10;
 
-position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 
-z-index:5;
+    gap:14px;
 
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:13px;
-
-margin-top:-35px;
-
+    margin-top:-35px;
 }
 
 .stat{
+    padding:20px;
 
-background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
 
-border:1px solid var(--line);
+    background:#fff;
 
-border-radius:18px;
-
-padding:20px;
-
-box-shadow:0 12px 35px rgba(5,70,30,.07);
-
-transition:.25s;
-
-}
-
-.stat:hover{
-
-transform:translateY(-5px);
-
-box-shadow:var(--shadow);
-
-}
-
-.stat-icon{
-
-font-size:23px;
-
-margin-bottom:5px;
-
+    box-shadow:var(--shadow-soft);
 }
 
 .stat b{
+    display:block;
 
-display:block;
+    color:var(--green);
 
-font-size:22px;
-
-color:var(--green);
-
+    font-size:23px;
+    line-height:1.1;
 }
 
 .stat span{
+    display:block;
 
-font-size:11px;
+    margin-top:4px;
 
-color:var(--muted);
+    color:var(--muted);
 
+    font-size:10px;
 }
 
 
 /* =========================================================
-   SEÇÕES
+   SECTIONS
 ========================================================= */
 
 section{
-
-padding:85px 0;
-
+    padding:90px 0;
 }
 
 .section-head{
+    max-width:730px;
 
-max-width:730px;
-
-margin-bottom:38px;
-
+    margin-bottom:40px;
 }
 
 .section-head small{
+    color:var(--green);
 
-color:var(--green);
+    font-size:10px;
+    font-weight:900;
 
-font-weight:900;
-
-letter-spacing:1.5px;
-
-text-transform:uppercase;
-
-font-size:11px;
-
+    letter-spacing:1.7px;
+    text-transform:uppercase;
 }
 
 .section-head h2{
+    margin:9px 0 13px;
 
-font-family:"Playfair Display",serif;
+    font-family:"Playfair Display",serif;
 
-font-size:clamp(32px,4vw,49px);
+    font-size:clamp(34px,4vw,51px);
 
-line-height:1.05;
+    line-height:1.03;
 
-margin:9px 0 13px;
-
+    letter-spacing:-1px;
 }
 
 .section-head p{
+    color:var(--muted);
 
-color:var(--muted);
-
+    font-size:14px;
 }
 
 
@@ -781,235 +585,166 @@ color:var(--muted);
 ========================================================= */
 
 #matriculas{
-
-background:var(--bg);
-
+    background:var(--cream);
 }
 
 .prices{
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:20px;
-
+    gap:20px;
 }
 
 .price{
+    overflow:hidden;
 
-overflow:hidden;
+    border:1px solid var(--line);
+    border-radius:22px;
 
-background:#fff;
+    background:#fff;
 
-border:1px solid var(--line);
+    box-shadow:var(--shadow-soft);
 
-border-radius:20px;
-
-box-shadow:0 12px 35px rgba(5,70,30,.06);
-
-transition:.25s;
-
+    transition:.25s;
 }
 
 .price:hover{
-
-transform:translateY(-5px);
-
-box-shadow:var(--shadow);
-
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
 }
 
 .price-top{
+    padding:26px;
 
-color:#fff;
+    color:#fff;
 
-background:
-
-linear-gradient(
-135deg,
-var(--green),
-var(--green2)
-);
-
-padding:25px;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.price-top:after{
-
-content:"";
-
-position:absolute;
-
-width:120px;
-
-height:120px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.09);
-
-right:-35px;
-
-top:-35px;
-
-}
-
-.price-top h3{
-
-font-size:15px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.amount{
-
-font-size:36px;
-
-font-weight:900;
-
-margin-top:4px;
-
-position:relative;
-
-z-index:2;
-
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green-light)
+        );
 }
 
 .price:nth-child(2) .price-top{
+    background:
+        linear-gradient(
+            135deg,
+            #4d8e17,
+            #8fcf27
+        );
+}
 
-background:
+.price-top h3{
+    font-size:14px;
+    letter-spacing:.4px;
+}
 
-linear-gradient(
-135deg,
-#64a918,
-#91cc2c
-);
+.amount{
+    margin-top:4px;
 
+    font-size:37px;
+    font-weight:900;
 }
 
 .price-body{
-
-padding:22px;
-
+    padding:23px;
 }
 
 .price-body ul{
+    list-style:none;
 
-list-style:none;
-
-display:grid;
-
-gap:9px;
-
-font-size:13px;
-
-color:#53645b;
-
+    display:grid;
+    gap:10px;
 }
 
-.price-body li:before{
+.price-body li{
+    color:#53645b;
 
-content:"✓";
+    font-size:12px;
+}
 
-font-weight:900;
+.price-body li::before{
+    content:"✓";
 
-color:var(--green);
+    margin-right:8px;
 
-margin-right:8px;
+    color:var(--green);
 
+    font-weight:900;
 }
 
 .promo{
+    margin-top:18px;
 
-margin-top:17px;
+    padding:14px;
 
-padding:13px;
+    border:1px solid #f0df94;
+    border-radius:13px;
 
-border-radius:13px;
+    background:#fff8d9;
 
-background:#fff7d3;
+    color:#65561d;
 
-border:1px solid #f0df94;
+    font-size:11px;
+}
 
-font-size:12px;
-
+.promo strong{
+    color:#4f6518;
 }
 
 .fees{
+    margin-top:22px;
 
-margin-top:22px;
+    overflow:hidden;
 
-overflow:hidden;
+    border:1px solid var(--line);
+    border-radius:22px;
 
-background:#fff;
+    background:#fff;
 
-border:1px solid var(--line);
-
-border-radius:20px;
-
-box-shadow:var(--shadow-soft);
-
+    box-shadow:var(--shadow-soft);
 }
 
 .fees-title{
+    padding:18px;
 
-background:var(--green);
+    color:#fff;
 
-color:#fff;
+    background:var(--green);
 
-padding:18px;
-
-font-weight:900;
-
+    font-size:14px;
+    font-weight:900;
 }
 
 .fee-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
 .fee{
+    display:flex;
+    justify-content:space-between;
 
-display:flex;
+    padding:13px 17px;
 
-justify-content:space-between;
+    border-bottom:1px solid #edf2ed;
 
-padding:12px 16px;
-
-border-bottom:1px solid #edf2ed;
-
-font-size:13px;
-
+    font-size:12px;
 }
 
 .fee b{
-
-color:var(--green);
-
+    color:var(--green);
 }
 
 .note{
+    padding:13px 17px;
 
-padding:13px 16px;
+    background:#fbfdfb;
 
-font-size:10px;
+    color:#78827c;
 
-color:#758078;
-
-background:#fbfdfb;
-
+    font-size:10px;
 }
 
 
@@ -1018,556 +753,292 @@ background:#fbfdfb;
 ========================================================= */
 
 .offers{
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:25px;
-
+    gap:27px;
 }
 
 .offer{
+    display:flex;
+    gap:13px;
 
-display:flex;
+    padding:18px;
 
-gap:13px;
+    margin-bottom:11px;
 
-padding:17px;
+    border:1px solid var(--line);
+    border-radius:17px;
 
-border:1px solid var(--line);
+    background:#fff;
 
-border-radius:16px;
-
-margin-bottom:11px;
-
-background:#fff;
-
-transition:.25s;
-
+    transition:.25s;
 }
 
 .offer:hover{
-
-transform:translateY(-3px);
-
-box-shadow:var(--shadow);
-
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-soft);
 }
 
 .check{
+    width:36px;
+    height:36px;
+    min-width:36px;
 
-width:34px;
+    display:grid;
+    place-items:center;
 
-height:34px;
+    border-radius:50%;
 
-min-width:34px;
+    background:#e6f4dc;
+    color:var(--green);
 
-border-radius:50%;
-
-background:#e6f4dc;
-
-color:var(--green);
-
-display:grid;
-
-place-items:center;
-
-font-weight:900;
-
+    font-weight:900;
 }
 
 .offer b{
-
-font-size:14px;
-
+    font-size:14px;
 }
 
 .offer p{
+    margin-top:3px;
 
-margin-top:3px;
+    color:var(--muted);
 
-font-size:11px;
-
-color:var(--muted);
-
+    font-size:11px;
 }
-
-
-/* =========================================================
-   PAINEL VISUAL
-========================================================= */
 
 .green-box{
+    min-height:405px;
 
-min-height:370px;
+    position:relative;
+    overflow:hidden;
 
-border-radius:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
 
-padding:34px;
+    padding:35px;
 
-display:flex;
+    border-radius:26px;
 
-flex-direction:column;
+    color:#fff;
 
-justify-content:flex-end;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(4,59,27,.94),
+            rgba(7,91,42,.70)
+        ),
+        url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1500&q=82")
+        center/cover;
 
-overflow:hidden;
-
-position:relative;
-
-color:#fff;
-
-background:
-
-linear-gradient(
-145deg,
-rgba(6,62,30,.94),
-rgba(11,122,57,.78)
-),
-
-url("banner.jpg")
-
-center/cover;
-
-box-shadow:var(--shadow);
-
-}
-
-.green-box:before{
-
-content:"";
-
-position:absolute;
-
-width:200px;
-
-height:200px;
-
-border-radius:50%;
-
-border:1px solid rgba(255,255,255,.18);
-
-right:-70px;
-
-top:-70px;
-
+    box-shadow:var(--shadow);
 }
 
 .green-box h3{
+    max-width:390px;
 
-font-family:"Playfair Display",serif;
+    margin-bottom:10px;
 
-font-size:32px;
+    font-family:"Playfair Display",serif;
 
-line-height:1.1;
+    font-size:34px;
 
-margin-bottom:10px;
-
-position:relative;
-
-z-index:2;
-
+    line-height:1.08;
 }
 
 .green-box p{
+    max-width:460px;
 
-font-size:13px;
+    margin-bottom:16px;
 
-color:#e0eee2;
+    color:#e2eee5;
 
-margin-bottom:15px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.green-box strong{
-
-position:relative;
-
-z-index:2;
-
-color:var(--lime2);
-
+    font-size:13px;
 }
 
 
 /* =========================================================
-   AMBIENTE VISUAL
+   BLOCOS VISUAIS
 ========================================================= */
 
 .visual-section{
-
-background:#fff;
-
+    background:#fff;
 }
 
 .visual-grid{
+    display:grid;
+    grid-template-columns:1.25fr 1fr 1fr;
 
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:18px;
-
+    gap:17px;
 }
 
 .visual{
+    height:380px;
 
-height:370px;
+    position:relative;
+    overflow:hidden;
 
-border-radius:22px;
+    border-radius:23px;
 
-overflow:hidden;
+    background:#dce8dc;
 
-position:relative;
-
-box-shadow:var(--shadow);
-
-background:var(--green3);
-
+    box-shadow:var(--shadow-soft);
 }
 
 .visual img{
+    width:100%;
+    height:100%;
 
-width:100%;
+    object-fit:cover;
 
-height:100%;
-
-object-fit:cover;
-
-transition:.5s;
-
+    transition:.5s;
 }
 
 .visual:hover img{
+    transform:scale(1.06);
+}
 
-transform:scale(1.06);
+.visual::after{
+    content:"";
 
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(3,38,18,.86)
+        );
 }
 
 .visual-content{
+    position:absolute;
 
-position:absolute;
+    z-index:2;
 
-left:0;
+    left:0;
+    right:0;
+    bottom:0;
 
-right:0;
+    padding:27px 21px 21px;
 
-bottom:0;
-
-padding:55px 20px 20px;
-
-background:
-
-linear-gradient(
-transparent,
-rgba(4,42,22,.94)
-);
-
-color:#fff;
-
+    color:#fff;
 }
 
 .visual-content h3{
+    margin-bottom:3px;
 
-font-size:20px;
-
-margin-bottom:3px;
-
+    font-size:20px;
 }
 
 .visual-content p{
+    color:#e2eee5;
 
-font-size:11px;
-
-color:#e3eee5;
-
+    font-size:11px;
 }
 
 
 /* =========================================================
-   BLOCO VISUAL INSTITUCIONAL
+   SECÇÃO INSTITUCIONAL
 ========================================================= */
 
 .about-visual{
-
-background:var(--bg);
-
+    background:var(--cream);
 }
 
 .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
 
-display:grid;
+    gap:50px;
 
-grid-template-columns:1fr 1fr;
-
-gap:45px;
-
-align-items:center;
-
+    align-items:center;
 }
 
 .about-image{
-
-position:relative;
-
+    position:relative;
 }
 
 .about-image img{
+    width:100%;
+    height:520px;
 
-width:100%;
+    object-fit:cover;
 
-height:500px;
+    border-radius:26px;
 
-object-fit:cover;
-
-border-radius:25px;
-
-box-shadow:var(--shadow);
-
-}
-
-.about-image:before{
-
-content:"";
-
-position:absolute;
-
-width:100px;
-
-height:100px;
-
-border-radius:20px;
-
-background:var(--lime);
-
-right:-20px;
-
-top:-20px;
-
-z-index:0;
-
-opacity:.35;
-
-}
-
-.about-image img{
-
-position:relative;
-
-z-index:1;
-
+    box-shadow:var(--shadow);
 }
 
 .about-label{
+    position:absolute;
 
-position:absolute;
+    left:25px;
+    right:25px;
+    bottom:25px;
 
-bottom:25px;
+    padding:17px;
 
-left:25px;
+    border-radius:17px;
 
-right:25px;
+    background:#fff;
 
-background:#fff;
-
-border-radius:16px;
-
-padding:17px;
-
-box-shadow:var(--shadow);
-
-z-index:2;
-
+    box-shadow:var(--shadow);
 }
 
 .about-label b{
+    display:block;
 
-display:block;
+    color:var(--green);
 
-color:var(--green);
-
+    font-size:14px;
 }
 
 .about-label span{
+    color:var(--muted);
 
-font-size:11px;
-
-color:var(--muted);
-
+    font-size:10px;
 }
 
 .about-points{
+    display:grid;
+    gap:15px;
 
-display:grid;
-
-gap:13px;
-
-margin-top:25px;
-
+    margin-top:25px;
 }
 
 .about-point{
+    display:flex;
+    align-items:flex-start;
 
-display:flex;
-
-gap:12px;
-
-align-items:flex-start;
-
-padding:13px;
-
-background:#fff;
-
-border-radius:15px;
-
-border:1px solid var(--line);
-
+    gap:12px;
 }
 
 .about-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
 
-width:40px;
+    display:grid;
+    place-items:center;
 
-height:40px;
+    border-radius:13px;
 
-border-radius:12px;
+    background:#e6f4dc;
 
-background:#e6f4dc;
-
-color:var(--green);
-
-display:grid;
-
-place-items:center;
-
-min-width:40px;
-
-font-size:18px;
-
+    font-size:18px;
 }
 
 .about-point b{
-
-font-size:14px;
-
+    font-size:14px;
 }
 
 .about-point p{
+    color:var(--muted);
 
-font-size:11px;
-
-color:var(--muted);
-
-}
-
-
-/* =========================================================
-   BLOCO DE DESTAQUE
-========================================================= */
-
-.highlight{
-
-padding-top:0;
-
-background:var(--bg);
-
-}
-
-.highlight-card{
-
-position:relative;
-
-overflow:hidden;
-
-border-radius:27px;
-
-min-height:300px;
-
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
-
-align-items:stretch;
-
-background:var(--green3);
-
-box-shadow:var(--shadow);
-
-}
-
-.highlight-content{
-
-padding:45px;
-
-color:#fff;
-
-position:relative;
-
-z-index:2;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-}
-
-.highlight-content small{
-
-color:var(--lime2);
-
-font-weight:900;
-
-letter-spacing:1px;
-
-text-transform:uppercase;
-
-}
-
-.highlight-content h2{
-
-font-family:"Playfair Display",serif;
-
-font-size:clamp(30px,4vw,45px);
-
-line-height:1.05;
-
-margin:10px 0;
-
-}
-
-.highlight-content p{
-
-font-size:13px;
-
-color:#d8e9dc;
-
-max-width:520px;
-
-}
-
-.highlight-image{
-
-min-height:300px;
-
-background:
-
-linear-gradient(
-90deg,
-var(--green3) 0%,
-rgba(6,62,30,.2) 40%
-),
-
-url("crianças.jpg")
-
-center/cover;
-
+    font-size:11px;
 }
 
 
@@ -1576,131 +1047,67 @@ center/cover;
 ========================================================= */
 
 .gallery{
-
-background:#f8fbf7;
-
+    background:#fff;
 }
 
 .gallery-grid{
+    display:grid;
 
-display:grid;
+    grid-template-columns:1.25fr 1fr 1fr;
 
-grid-template-columns:1.2fr 1fr 1fr;
+    grid-auto-rows:260px;
 
-gap:13px;
-
+    gap:14px;
 }
 
 .gallery-item{
+    position:relative;
 
-border:0;
+    overflow:hidden;
 
-padding:0;
+    padding:0;
 
-border-radius:18px;
+    border:0;
+    border-radius:19px;
 
-overflow:hidden;
+    background:#e5eee3;
 
-cursor:pointer;
+    box-shadow:var(--shadow-soft);
 
-background:#fff;
-
-box-shadow:var(--shadow);
-
-min-height:260px;
-
-position:relative;
-
+    cursor:pointer;
 }
 
 .gallery-item:first-child{
-
-grid-row:span 2;
-
+    grid-row:span 2;
 }
 
 .gallery-item img{
+    display:block;
 
-width:100%;
+    width:100%;
+    height:100%;
 
-height:100%;
+    object-fit:cover;
 
-min-height:260px;
+    transition:.45s;
+}
 
-object-fit:cover;
+.gallery-item::after{
+    content:"";
 
-display:block;
+    position:absolute;
+    inset:0;
 
-transition:.4s;
+    background:linear-gradient(
+        transparent 55%,
+        rgba(0,30,15,.55)
+    );
 
+    pointer-events:none;
 }
 
 .gallery-item:hover img{
-
-transform:scale(1.05);
-
-}
-
-.gallery-overlay{
-
-position:absolute;
-
-left:0;
-
-right:0;
-
-bottom:0;
-
-padding:35px 18px 15px;
-
-background:linear-gradient(
-transparent,
-rgba(0,40,20,.82)
-);
-
-color:#fff;
-
-text-align:left;
-
-}
-
-.gallery-overlay b{
-
-font-size:14px;
-
-}
-
-.gallery-overlay span{
-
-display:block;
-
-font-size:10px;
-
-color:#dce9df;
-
-}
-
-
-/* =========================================================
-   AVISO DAS IMAGENS
-========================================================= */
-
-.visual-note{
-
-margin-top:18px;
-
-padding:13px 16px;
-
-border-radius:13px;
-
-background:#fff;
-
-border:1px solid var(--line);
-
-font-size:11px;
-
-color:var(--muted);
-
+    transform:scale(1.06);
 }
 
 
@@ -1708,238 +1115,184 @@ color:var(--muted);
    CONTACTO
 ========================================================= */
 
-.contact-section{
-
-background:#fff;
-
+#contacto{
+    background:var(--cream);
 }
 
 .contact-grid{
+    display:grid;
 
-display:grid;
+    grid-template-columns:.82fr 1.18fr;
 
-grid-template-columns:.85fr 1.15fr;
-
-gap:25px;
-
+    gap:26px;
 }
 
 .contact-card{
+    display:flex;
+    align-items:center;
 
-display:flex;
+    gap:13px;
 
-gap:13px;
+    padding:17px;
 
-padding:17px;
+    margin-bottom:11px;
 
-margin-bottom:11px;
+    border:1px solid var(--line);
+    border-radius:18px;
 
-background:#fff;
+    background:#fff;
 
-border:1px solid var(--line);
+    box-shadow:0 10px 30px rgba(5,70,30,.05);
 
-border-radius:18px;
-
-box-shadow:0 10px 30px rgba(5,70,30,.05);
-
-transition:.25s;
-
+    transition:.2s;
 }
 
 .contact-card:hover{
-
-transform:translateY(-3px);
-
-box-shadow:var(--shadow-soft);
-
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-soft);
 }
 
 .ico{
+    width:43px;
+    height:43px;
+    min-width:43px;
 
-width:42px;
+    display:grid;
+    place-items:center;
 
-height:42px;
+    border-radius:13px;
 
-min-width:42px;
+    background:#e8f5df;
 
-border-radius:12px;
+    color:var(--green);
 
-background:#e8f5df;
-
-color:var(--green);
-
-display:grid;
-
-place-items:center;
-
+    font-size:18px;
 }
 
 .contact-card b{
+    display:block;
 
-display:block;
-
+    font-size:13px;
 }
 
 .contact-card span{
+    display:block;
 
-font-size:11px;
+    color:var(--muted);
 
-color:var(--muted);
-
+    font-size:10px;
 }
 
 .map{
+    margin-top:15px;
 
-margin-top:15px;
+    padding:23px;
 
-padding:22px;
+    text-align:center;
 
-text-align:center;
+    border:1px solid var(--line);
+    border-radius:19px;
 
-background:
-
-linear-gradient(
-135deg,
-#edf7e9,
-#f9fcf8
-);
-
-border:1px solid var(--line);
-
-border-radius:18px;
-
-}
-
-.map-icon{
-
-font-size:30px;
-
-margin-bottom:5px;
-
+    background:#eaf5e6;
 }
 
 .map b{
+    color:var(--green);
 
-color:var(--green);
-
-font-size:13px;
-
+    font-size:13px;
 }
 
 .map p{
+    margin:7px 0 14px;
 
-font-size:11px;
+    color:var(--muted);
 
-color:var(--muted);
-
-margin:7px 0 13px;
-
+    font-size:10px;
 }
 
 .form{
+    padding:27px;
 
-padding:25px;
+    border:1px solid var(--line);
+    border-radius:23px;
 
-background:var(--bg);
+    background:#fff;
 
-border:1px solid var(--line);
-
-border-radius:22px;
-
-box-shadow:var(--shadow-soft);
-
+    box-shadow:var(--shadow-soft);
 }
 
 .form h3{
-
-margin-bottom:3px;
-
+    font-size:20px;
 }
 
 .form-intro{
+    margin:4px 0 19px;
 
-font-size:12px;
+    color:var(--muted);
 
-color:var(--muted);
-
-margin-bottom:18px;
-
+    font-size:11px;
 }
 
 .fields{
+    display:grid;
 
-display:grid;
+    grid-template-columns:1fr 1fr;
 
-grid-template-columns:1fr 1fr;
-
-gap:12px;
-
+    gap:13px;
 }
 
 .field{
-
-display:grid;
-
-gap:5px;
-
+    display:grid;
+    gap:5px;
 }
 
 .field.full{
-
-grid-column:1/-1;
-
+    grid-column:1/-1;
 }
 
 .field label{
-
-font-size:10px;
-
-font-weight:900;
-
+    font-size:10px;
+    font-weight:900;
 }
 
 .field input,
 .field select,
 .field textarea{
+    width:100%;
 
-width:100%;
+    padding:12px 13px;
 
-border:1px solid #d4e2d3;
+    border:1px solid #d5e2d4;
+    border-radius:11px;
 
-border-radius:11px;
+    outline:none;
 
-padding:11px 12px;
+    background:#fff;
 
-background:#fff;
+    color:var(--ink);
 
-outline:none;
-
+    transition:.2s;
 }
 
 .field textarea{
+    min-height:115px;
 
-min-height:110px;
-
-resize:vertical;
-
+    resize:vertical;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
+    border-color:var(--green);
 
-border-color:var(--green);
-
-box-shadow:0 0 0 3px rgba(7,91,42,.08);
-
+    box-shadow:
+        0 0 0 3px
+        rgba(7,91,42,.08);
 }
 
 .form .btn{
-
-width:100%;
-
-margin-top:13px;
-
+    width:100%;
+    margin-top:14px;
 }
 
 
@@ -1948,188 +1301,64 @@ margin-top:13px;
 ========================================================= */
 
 .faq{
+    background:#fff;
+}
 
-background:var(--bg);
-
+.faq-list{
+    max-width:850px;
 }
 
 .faq-item{
+    overflow:hidden;
 
-overflow:hidden;
+    margin-bottom:9px;
 
-margin-bottom:9px;
-
-border:1px solid var(--line);
-
-border-radius:16px;
-
+    border:1px solid var(--line);
+    border-radius:17px;
 }
 
 .faq-q{
+    width:100%;
 
-width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-padding:17px;
+    padding:17px;
 
-border:0;
+    border:0;
 
-background:#fff;
+    background:#fff;
 
-display:flex;
+    color:var(--ink);
 
-align-items:center;
+    text-align:left;
 
-justify-content:space-between;
+    font-weight:800;
 
-font-weight:800;
-
-text-align:left;
-
+    font-size:13px;
 }
 
 .faq-q span{
+    color:var(--green);
 
-font-size:20px;
-
-color:var(--green);
-
+    font-size:21px;
 }
 
 .faq-a{
+    display:none;
 
-display:none;
+    padding:0 17px 17px;
 
-padding:0 17px 17px;
+    color:var(--muted);
 
-font-size:12px;
+    background:#fff;
 
-color:var(--muted);
-
-background:#fff;
-
+    font-size:11px;
 }
 
 .faq-item.open .faq-a{
-
-display:block;
-
-}
-
-
-/* =========================================================
-   CTA FINAL
-========================================================= */
-
-.final-cta{
-
-padding-top:30px;
-
-background:var(--bg);
-
-}
-
-.final-card{
-
-position:relative;
-
-overflow:hidden;
-
-border-radius:25px;
-
-background:
-
-linear-gradient(
-135deg,
-var(--green3),
-var(--green2)
-);
-
-padding:45px;
-
-color:#fff;
-
-box-shadow:var(--shadow);
-
-}
-
-.final-card:before{
-
-content:"";
-
-position:absolute;
-
-width:260px;
-
-height:260px;
-
-border:1px solid rgba(255,255,255,.13);
-
-border-radius:50%;
-
-right:-80px;
-
-top:-100px;
-
-}
-
-.final-card:after{
-
-content:"";
-
-position:absolute;
-
-width:130px;
-
-height:130px;
-
-border:1px solid rgba(255,255,255,.1);
-
-border-radius:50%;
-
-right:100px;
-
-bottom:-80px;
-
-}
-
-.final-card h2{
-
-font-family:"Playfair Display",serif;
-
-font-size:clamp(30px,4vw,47px);
-
-line-height:1.05;
-
-max-width:650px;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.final-card p{
-
-margin-top:10px;
-
-max-width:600px;
-
-font-size:13px;
-
-color:#dcece0;
-
-position:relative;
-
-z-index:2;
-
-}
-
-.final-card .buttons{
-
-position:relative;
-
-z-index:2;
-
+    display:block;
 }
 
 
@@ -2138,111 +1367,56 @@ z-index:2;
 ========================================================= */
 
 footer{
+    padding:50px 0 20px;
 
-background:var(--green3);
+    background:var(--green-dark);
 
-color:#bcd2c0;
-
-padding:50px 0 20px;
-
+    color:#bcd2c0;
 }
 
 .footer-grid{
+    display:grid;
 
-display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
 
-grid-template-columns:1.3fr 1fr 1fr;
-
-gap:35px;
-
-}
-
-.footer-brand{
-
-display:flex;
-
-gap:12px;
-
-align-items:center;
-
-margin-bottom:15px;
-
-}
-
-.footer-logo{
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
-
-overflow:hidden;
-
-background:#fff;
-
-padding:3px;
-
-}
-
-.footer-logo img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-border-radius:50%;
-
+    gap:35px;
 }
 
 footer h4{
+    margin-bottom:11px;
 
-color:#fff;
+    color:#fff;
 
-margin-bottom:11px;
-
+    font-size:13px;
 }
 
 footer p,
 footer a,
 footer span{
+    color:#bcd2c0;
 
-font-size:11px;
-
-color:#bcd2c0;
-
+    font-size:11px;
 }
 
 .footer-links{
-
-display:grid;
-
-gap:7px;
-
+    display:grid;
+    gap:8px;
 }
 
 .footer-links a:hover{
-
-color:#fff;
-
+    color:#fff;
 }
 
 .copyright{
+    display:flex;
+    justify-content:space-between;
 
-border-top:1px solid rgba(255,255,255,.08);
+    margin-top:35px;
+    padding-top:17px;
 
-margin-top:30px;
+    border-top:1px solid rgba(255,255,255,.08);
 
-padding-top:16px;
-
-display:flex;
-
-justify-content:space-between;
-
-font-size:10px;
-
+    font-size:10px;
 }
 
 
@@ -2251,80 +1425,64 @@ font-size:10px;
 ========================================================= */
 
 .whatsapp{
+    position:fixed;
 
-position:fixed;
+    right:18px;
+    bottom:18px;
 
-right:18px;
+    z-index:1500;
 
-bottom:18px;
+    width:60px;
+    height:60px;
 
-z-index:150;
+    display:grid;
+    place-items:center;
 
-width:59px;
+    border:4px solid #fff;
+    border-radius:50%;
 
-height:59px;
+    background:#25d366;
 
-border-radius:50%;
+    color:#063e1e;
 
-background:#25d366;
+    font-size:27px;
 
-color:#063e1e;
+    box-shadow:0 13px 35px rgba(0,0,0,.22);
 
-display:grid;
-
-place-items:center;
-
-font-size:28px;
-
-border:4px solid #fff;
-
-box-shadow:0 12px 35px rgba(0,0,0,.2);
-
-transition:.25s;
-
+    transition:.25s;
 }
 
 .whatsapp:hover{
-
-transform:scale(1.08);
-
+    transform:scale(1.08);
 }
 
 
 /* =========================================================
-   TOP BUTTON
+   TO TOP
 ========================================================= */
 
 .to-top{
+    position:fixed;
 
-position:fixed;
+    right:20px;
+    bottom:91px;
 
-right:20px;
+    z-index:1000;
 
-bottom:90px;
+    display:none;
 
-display:none;
+    width:42px;
+    height:42px;
 
-width:41px;
+    border:1px solid var(--line);
+    border-radius:11px;
 
-height:41px;
+    background:#fff;
+    color:var(--green);
 
-border:1px solid var(--line);
+    box-shadow:var(--shadow-soft);
 
-background:#fff;
-
-color:var(--green);
-
-border-radius:11px;
-
-cursor:pointer;
-
-z-index:100;
-
-font-weight:900;
-
-box-shadow:var(--shadow-soft);
-
+    font-weight:900;
 }
 
 
@@ -2333,2553 +1491,2175 @@ box-shadow:var(--shadow-soft);
 ========================================================= */
 
 .modal{
+    position:fixed;
 
-position:fixed;
+    inset:0;
 
-inset:0;
+    z-index:3000;
 
-z-index:300;
+    display:none;
+    align-items:center;
+    justify-content:center;
 
-background:rgba(0,35,18,.88);
+    padding:15px;
 
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-padding:15px;
-
+    background:rgba(0,35,18,.86);
 }
 
 .modal.open{
-
-display:flex;
-
+    display:flex;
 }
 
 .modal-box{
+    position:relative;
 
-position:relative;
+    max-width:1000px;
+    max-height:90vh;
 
-background:#fff;
+    padding:9px;
 
-padding:10px;
+    border-radius:20px;
 
-border-radius:20px;
-
-max-width:900px;
-
-max-height:90vh;
-
-box-shadow:0 30px 80px rgba(0,0,0,.3);
-
+    background:#fff;
 }
 
 .modal-box img{
+    display:block;
 
-max-width:100%;
+    max-width:100%;
+    max-height:82vh;
 
-max-height:82vh;
-
-display:block;
-
-border-radius:12px;
-
+    border-radius:13px;
 }
 
 .close{
+    position:absolute;
 
-position:absolute;
+    top:12px;
+    right:12px;
 
-right:12px;
+    z-index:2;
 
-top:12px;
+    width:38px;
+    height:38px;
 
-width:36px;
+    border:0;
+    border-radius:10px;
 
-height:36px;
+    background:#fff;
 
-border:0;
+    color:var(--green);
 
-border-radius:10px;
+    font-size:23px;
 
-background:#fff;
-
-color:var(--green);
-
-font-size:22px;
-
-cursor:pointer;
-
-z-index:2;
-
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
 
 /* =========================================================
-   ANIMAÇÕES
+   REVEAL
 ========================================================= */
 
 .reveal{
+    opacity:0;
+    transform:translateY(18px);
 
-opacity:0;
-
-transform:translateY(20px);
-
-transition:
-opacity .7s ease,
-transform .7s ease;
-
+    transition:
+        opacity .65s ease,
+        transform .65s ease;
 }
 
 .reveal.visible{
-
-opacity:1;
-
-transform:translateY(0);
-
+    opacity:1;
+    transform:translateY(0);
 }
 
 
 /* =========================================================
-   RESPONSIVE 900
+   RESPONSIVE
 ========================================================= */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
-.nav-links{
+    .nav-links{
+        display:none;
 
-display:none;
+        position:absolute;
 
-position:absolute;
+        top:78px;
+        left:17px;
+        right:17px;
 
-top:78px;
+        padding:14px;
 
-left:16px;
+        flex-direction:column;
+        align-items:stretch;
 
-right:16px;
+        gap:5px;
 
-background:#fff;
+        border:1px solid var(--line);
+        border-radius:18px;
 
-padding:13px;
+        background:#fff;
 
-border:1px solid var(--line);
+        box-shadow:var(--shadow);
+    }
 
-border-radius:17px;
+    .nav-links.open{
+        display:flex;
+    }
 
-box-shadow:var(--shadow);
+    .nav-links a{
+        padding:12px;
+    }
 
-flex-direction:column;
+    .menu{
+        display:block;
+    }
 
-align-items:stretch;
+    .hero .wrap,
+    .about-grid,
+    .contact-grid,
+    .offers{
+        grid-template-columns:1fr;
+    }
 
-}
+    .hero .wrap{
+        padding:55px 0 75px;
+    }
 
-.nav-links.open{
+    .hero-visual{
+        max-width:700px;
+        width:100%;
+        margin:auto;
+    }
 
-display:flex;
+    .stats{
+        grid-template-columns:1fr 1fr;
+        margin-top:0;
+        padding-top:18px;
+    }
 
-}
+    .prices{
+        grid-template-columns:1fr;
+    }
 
-.menu{
+    .visual-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-display:block;
-
-}
-
-.hero .wrap,
-.about-grid,
-.contact-grid,
-.offers{
-
-grid-template-columns:1fr;
-
-}
-
-.hero .wrap{
-
-padding:48px 0;
-
-}
-
-.stats{
-
-grid-template-columns:1fr 1fr;
-
-margin-top:0;
-
-padding-top:18px;
-
-}
-
-.prices{
-
-grid-template-columns:1fr;
-
-}
-
-.visual-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.highlight-card{
-
-grid-template-columns:1fr;
-
-}
-
-.highlight-image{
-
-min-height:260px;
-
-}
-
-.footer-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
 
-/* =========================================================
-   RESPONSIVE 600
-========================================================= */
-
-@media(max-width:600px){
-
-.topbar .phone{
-
-display:none;
-
-}
-
-.topbar .wrap{
-
-justify-content:center;
-
-text-align:center;
-
-}
-
-.brand-name{
-
-font-size:13px;
-
-}
-
-.brand-sub{
-
-font-size:7px;
-
-}
-
-.logo{
-
-width:52px;
-
-height:52px;
-
-}
-
-.hero h1{
-
-font-size:43px;
-
-}
-
-.hero-photo img{
-
-height:340px;
-
-}
-
-.hero-card{
-
-left:8px;
-
-bottom:-22px;
-
-width:220px;
-
-}
-
-.hero-badge{
-
-right:7px;
-
-top:15px;
-
-}
-
-.stats,
-.fee-grid,
-.fields,
-.visual-grid,
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-item:first-child{
-
-grid-row:auto;
-
-}
-
-.gallery-item img,
-.gallery-item{
-
-min-height:300px;
-
-}
-
-.field.full{
-
-grid-column:auto;
-
-}
-
-.about-image img{
-
-height:380px;
-
-}
-
-.highlight-content{
-
-padding:32px 25px;
-
-}
-
-.highlight-image{
-
-min-height:240px;
-
-}
-
-.final-card{
-
-padding:32px 24px;
-
-}
-
-.copyright{
-
-display:block;
-
-}
-
-.copyright span{
-
-display:block;
-
-margin-top:5px;
-
-}
-
-}
-
-
-/* =========================================================
-   REDUÇÃO DE MOVIMENTO
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-*{
-
-scroll-behavior:auto!important;
-
-transition:none!important;
-
-animation:none!important;
-
-}
-
+@media(max-width:620px){
+
+    .wrap{
+        width:min(100% - 26px,1180px);
+    }
+
+    section{
+        padding:68px 0;
+    }
+
+    .topbar .phone{
+        display:none;
+    }
+
+    .topbar .wrap{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .brand-name{
+        font-size:12px;
+    }
+
+    .brand-sub{
+        font-size:6px;
+        letter-spacing:1px;
+    }
+
+    .brand-logo{
+        width:48px;
+        height:48px;
+    }
+
+    .hero .wrap{
+        gap:45px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-1.7px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .buttons{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-photo img{
+        height:355px;
+    }
+
+    .hero-card{
+        left:8px;
+        bottom:-22px;
+        width:225px;
+    }
+
+    .hero-badge{
+        top:15px;
+        right:7px;
+    }
+
+    .stats,
+    .fee-grid,
+    .fields,
+    .visual-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-auto-rows:300px;
+    }
+
+    .gallery-item:first-child{
+        grid-row:auto;
+    }
+
+    .about-image img{
+        height:380px;
+    }
+
+    .green-box{
+        min-height:350px;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        display:block;
+    }
+
+    .copyright span{
+        display:block;
+        margin-top:6px;
+    }
+
+    .whatsapp{
+        width:56px;
+        height:56px;
+        right:14px;
+        bottom:14px;
+    }
+
+    .to-top{
+        right:17px;
+        bottom:80px;
+    }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     TOPO
-===================================================== -->
+<!-- ======================================================
+     TOP BAR
+====================================================== -->
 
 <div class="topbar">
 
-<div class="wrap">
+    <div class="wrap">
 
-<span>
-📚 Ano Lectivo <strong>2026/2027</strong> • Matrículas abertas
-</span>
+        <span>
+            📚 Ano Lectivo <strong>2026/2027</strong>
+            • Matrículas abertas
+        </span>
 
-<span class="phone">
-📞 +244 947 618 194 &nbsp; | &nbsp; +244 951 670 113
-</span>
+        <span class="phone">
+            📞 +244 947 618 194
+            &nbsp; | &nbsp;
+            +244 951 670 113
+        </span>
+
+    </div>
 
 </div>
 
-</div>
 
-
-
-<!-- =====================================================
+<!-- ======================================================
      HEADER
-===================================================== -->
+====================================================== -->
 
 <header>
 
-<div class="wrap nav">
+    <div class="wrap nav">
+
+        <a href="#inicio" class="brand">
+
+            <img
+                src="logo.jpg"
+                class="brand-logo"
+                alt="Logotipo do Colégio Ramo Verde"
+            >
+
+            <div>
+
+                <div class="brand-name">
+                    COLÉGIO RAMO VERDE
+                </div>
+
+                <div class="brand-sub">
+                    EDUCAÇÃO • DISCIPLINA • FUTURO
+                </div>
+
+            </div>
+
+        </a>
 
 
-<a href="#inicio" class="brand">
-
-<div class="logo">
-
-<img
-src="logo.jpg"
-alt="Logotipo do Colégio Ramo Verde"
->
-
-</div>
+        <button
+            class="menu"
+            id="menu"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
 
 
-<div>
+        <nav
+            class="nav-links"
+            id="navLinks"
+        >
 
-<div class="brand-name">
-COLÉGIO RAMO VERDE
-</div>
+            <a href="#inicio">
+                Início
+            </a>
 
-<div class="brand-sub">
-EDUCAÇÃO • DISCIPLINA • FUTURO
-</div>
+            <a href="#matriculas">
+                Matrículas
+            </a>
 
-</div>
+            <a href="#oferta">
+                O que oferecemos
+            </a>
 
-</a>
+            <a href="#ambiente">
+                Ambiente
+            </a>
 
+            <a href="#galeria">
+                Galeria
+            </a>
 
+            <a href="#contacto">
+                Contacto
+            </a>
 
-<button
-class="menu"
-id="menu"
-aria-label="Abrir menu"
-aria-expanded="false"
->
-☰
-</button>
+            <a
+                href="#matriculas"
+                class="nav-cta"
+            >
+                Garantir vaga
+            </a>
 
+        </nav>
 
-
-<nav
-class="nav-links"
-id="navLinks"
->
-
-<a href="#inicio">
-Início
-</a>
-
-<a href="#matriculas">
-Matrículas
-</a>
-
-<a href="#oferta">
-O que oferecemos
-</a>
-
-<a href="#recursos">
-Ambiente
-</a>
-
-<a href="#galeria">
-Galeria
-</a>
-
-<a href="#contacto">
-Contacto
-</a>
-
-<a
-href="#matriculas"
-class="nav-cta"
->
-Garantir vaga
-</a>
-
-</nav>
-
-</div>
+    </div>
 
 </header>
-
 
 
 <main>
 
 
-<!-- =====================================================
+<!-- ======================================================
      HERO
-===================================================== -->
+====================================================== -->
 
 <section
-class="hero"
-id="inicio"
+    class="hero"
+    id="inicio"
 >
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="hero-content reveal">
+
+            <span class="tag">
+                MATRÍCULAS 2026/2027
+            </span>
 
 
-<div class="reveal">
-
-<span class="tag">
-
-<span class="tag-dot"></span>
-
-MATRÍCULAS 2026/2027
-
-</span>
+            <h1>
+                Educar hoje.
+                <br>
+                <span>Transformar</span>
+                o amanhã.
+            </h1>
 
 
-<h1>
-
-Educar hoje.<br>
-
-<span>
-Transformar
-</span>
-
-o amanhã.
-
-</h1>
+            <p class="hero-text">
+                Educação, disciplina e acompanhamento
+                para contribuir para o desenvolvimento
+                dos alunos durante o Ano Lectivo
+                2026/2027.
+            </p>
 
 
-<p class="hero-text">
+            <div class="buttons">
 
-Educação, disciplina e acompanhamento para contribuir
-para o desenvolvimento dos alunos durante o Ano Lectivo
-2026/2027.
-
-</p>
-
-
-<div class="buttons">
+                <a
+                    href="#matriculas"
+                    class="btn primary"
+                >
+                    🎓 Ver condições de matrícula
+                </a>
 
 
-<a
-href="#matriculas"
-class="btn primary"
->
-🎓 Ver matrículas
-</a>
+                <a
+                    href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
+                    target="_blank"
+                    rel="noopener"
+                    class="btn secondary"
+                >
+                    💬 Falar no WhatsApp
+                </a>
+
+            </div>
 
 
-<a
-href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
-target="_blank"
-rel="noopener"
-class="btn secondary"
->
-💬 Falar no WhatsApp
-</a>
+            <p class="hero-location">
+                📍
+                <strong>
+                    Viana – Estalagem KM 12 B, Bairro Novo
+                </strong>
+            </p>
+
+        </div>
 
 
-</div>
+        <div class="hero-visual reveal">
+
+            <!-- IMAGEM EXTERNA: NÃO DEPENDE DO REPOSITÓRIO -->
+
+            <div class="hero-photo">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=85"
+                    alt="Ambiente de aprendizagem numa sala de aula"
+                    loading="eager"
+                    fetchpriority="high"
+                >
+
+            </div>
 
 
-<p class="hero-location">
+            <div class="hero-badge">
 
-📍
+                ANO LECTIVO
 
-<strong>
-Viana – Estalagem KM 12 B, Bairro Novo
-</strong>
+                <strong>
+                    2026/2027
+                </strong>
 
-</p>
-
-
-</div>
+            </div>
 
 
+            <div class="hero-card">
 
-<div class="hero-visual reveal">
+                🎁
 
+                <strong>
+                    Condição especial de matrícula
+                </strong>
 
-<div class="hero-photo">
+                Os primeiros 20 alunos que efectuarem
+                a matrícula terão
+                <b>50% de desconto</b>
+                no valor da matrícula.
 
-<img
-src="banner.jpg"
-alt="Banner do Colégio Ramo Verde"
-loading="eager"
-fetchpriority="high"
->
+            </div>
 
-</div>
+        </div>
 
-
-<div class="hero-badge">
-
-🎓 ANO LECTIVO
-
-<strong>
-2026/2027
-</strong>
-
-</div>
-
-
-<div class="hero-card">
-
-🎁
-
-<strong>
-Promoção especial
-</strong>
-
-Os primeiros 20 alunos que efectuarem a matrícula
-terão <b>50% de desconto</b> no valor da matrícula.
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      ESTATÍSTICAS
-===================================================== -->
+====================================================== -->
 
 <div class="wrap">
 
-<div class="stats">
+    <div class="stats">
+
+        <div class="stat reveal">
+
+            <b>
+                Pré–5.ª
+            </b>
+
+            <span>
+                Iniciação até à 5.ª classe
+            </span>
+
+        </div>
 
 
-<div class="stat reveal">
+        <div class="stat reveal">
 
-<div class="stat-icon">
-🎓
-</div>
+            <b>
+                6.ª–9.ª
+            </b>
 
-<b>
-Pré–5.ª
-</b>
+            <span>
+                Ensino até à 9.ª classe
+            </span>
 
-<span>
-Iniciação até à 5.ª classe
-</span>
-
-</div>
+        </div>
 
 
-<div class="stat reveal">
+        <div class="stat reveal">
 
-<div class="stat-icon">
-📚
-</div>
+            <b>
+                5.000 Kz
+            </b>
 
-<b>
-6.ª–9.ª
-</b>
+            <span>
+                Matrícula / confirmação
+                Pré–5.ª
+            </span>
 
-<span>
-Ensino até à 9.ª classe
-</span>
-
-</div>
+        </div>
 
 
-<div class="stat reveal">
+        <div class="stat reveal">
 
-<div class="stat-icon">
-📝
-</div>
+            <b>
+                5.500 Kz
+            </b>
 
-<b>
-5.000 Kz
-</b>
+            <span>
+                Matrícula / confirmação
+                6.ª–9.ª
+            </span>
 
-<span>
-Pré–5.ª • matrícula/confirm.
-</span>
+        </div>
 
-</div>
-
-
-<div class="stat reveal">
-
-<div class="stat-icon">
-📋
-</div>
-
-<b>
-5.500 Kz
-</b>
-
-<span>
-6.ª–9.ª • matrícula/confirm.
-</span>
+    </div>
 
 </div>
 
 
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
+<!-- ======================================================
      MATRÍCULAS
-===================================================== -->
+====================================================== -->
 
 <section id="matriculas">
 
-<div class="wrap">
+    <div class="wrap">
 
+        <div class="section-head reveal">
 
-<div class="section-head reveal">
+            <small>
+                Matrículas e confirmações
+            </small>
 
-<small>
-Matrículas e confirmações
-</small>
+            <h2>
+                Garanta a vaga do seu filho.
+            </h2>
 
-<h2>
-Garanta a vaga do seu filho.
-</h2>
+            <p>
+                Consulte as condições de matrícula,
+                confirmação e propinas para o
+                Ano Lectivo 2026/2027.
+            </p>
 
-<p>
-Condições publicadas pelo Colégio Ramo Verde para
-o Ano Lectivo 2026/2027.
-</p>
+        </div>
 
-</div>
 
+        <div class="prices">
 
 
-<div class="prices">
+            <article class="price reveal">
 
+                <div class="price-top">
 
-<article class="price reveal">
+                    <h3>
+                        INICIAÇÃO À 5.ª CLASSE
+                    </h3>
 
-<div class="price-top">
+                    <div class="amount">
+                        5.000 Kz
+                    </div>
 
-<h3>
-INICIAÇÃO À 5.ª CLASSE
-</h3>
+                </div>
 
-<div class="amount">
-5.000 Kz
-</div>
 
-</div>
+                <div class="price-body">
 
+                    <ul>
 
-<div class="price-body">
+                        <li>
+                            Matrícula/Confirmação —
+                            1.000 Kz
+                        </li>
 
-<ul>
+                        <li>
+                            Cartão de Estudante —
+                            1.500 Kz
+                        </li>
 
-<li>
-Matrícula/Confirmação — 1.000 Kz
-</li>
+                        <li>
+                            Porta-passe —
+                            200 Kz
+                        </li>
 
-<li>
-Cartão de Estudante — 1.500 Kz
-</li>
+                        <li>
+                            Boletim —
+                            200 Kz
+                        </li>
 
-<li>
-Porta-passe — 200 Kz
-</li>
+                        <li>
+                            Mica —
+                            100 Kz
+                        </li>
 
-<li>
-Boletim — 200 Kz
-</li>
+                        <li>
+                            Carimbo da Bata —
+                            2.000 Kz
+                        </li>
 
-<li>
-Mica — 100 Kz
-</li>
+                    </ul>
 
-<li>
-Carimbo da Bata — 2.000 Kz
-</li>
 
-</ul>
+                    <div class="promo">
 
+                        🎁
 
-<div class="promo">
+                        Os primeiros 20 alunos
+                        que efectuarem a matrícula
+                        terão
+                        <strong>
+                            50% de desconto
+                        </strong>
+                        no valor da matrícula.
 
-🎁 Primeiros 20 alunos:
+                    </div>
 
-<strong>
-50% de desconto
-</strong>
+                </div>
 
-no valor da matrícula.
+            </article>
 
-</div>
 
-</div>
+            <article class="price reveal">
 
-</article>
+                <div class="price-top">
 
+                    <h3>
+                        6.ª À 9.ª CLASSE
+                    </h3>
 
+                    <div class="amount">
+                        5.500 Kz
+                    </div>
 
-<article class="price reveal">
+                </div>
 
-<div class="price-top">
 
-<h3>
-6.ª À 9.ª CLASSE
-</h3>
+                <div class="price-body">
 
-<div class="amount">
-5.500 Kz
-</div>
+                    <ul>
 
-</div>
+                        <li>
+                            Matrícula/Confirmação —
+                            1.500 Kz
+                        </li>
 
+                        <li>
+                            Cartão de Estudante —
+                            1.500 Kz
+                        </li>
 
-<div class="price-body">
+                        <li>
+                            Porta-passe —
+                            200 Kz
+                        </li>
 
-<ul>
+                        <li>
+                            Boletim —
+                            200 Kz
+                        </li>
 
-<li>
-Matrícula/Confirmação — 1.500 Kz
-</li>
+                        <li>
+                            Mica —
+                            100 Kz
+                        </li>
 
-<li>
-Cartão de Estudante — 1.500 Kz
-</li>
+                        <li>
+                            Carimbo da Bata —
+                            2.000 Kz
+                        </li>
 
-<li>
-Porta-passe — 200 Kz
-</li>
+                    </ul>
 
-<li>
-Boletim — 200 Kz
-</li>
 
-<li>
-Mica — 100 Kz
-</li>
+                    <div class="promo">
 
-<li>
-Carimbo da Bata — 2.000 Kz
-</li>
+                        🎁
 
-</ul>
+                        Os primeiros 20 alunos
+                        que efectuarem a matrícula
+                        terão
+                        <strong>
+                            50% de desconto
+                        </strong>
+                        no valor da matrícula.
 
+                    </div>
 
-<div class="promo">
+                </div>
 
-🎁 Primeiros 20 alunos:
+            </article>
 
-<strong>
-50% de desconto
-</strong>
+        </div>
 
-no valor da matrícula.
 
-</div>
+        <div class="fees reveal">
 
-</div>
+            <div class="fees-title">
+                💳 Propinas mensais —
+                Ano Lectivo 2026/2027
+            </div>
 
-</article>
 
+            <div class="fee-grid">
 
-</div>
+                <div class="fee">
+                    Pré
+                    <b>2.000 Kz</b>
+                </div>
 
+                <div class="fee">
+                    1.ª classe
+                    <b>2.300 Kz</b>
+                </div>
 
+                <div class="fee">
+                    2.ª classe
+                    <b>2.500 Kz</b>
+                </div>
 
-<!-- PROPINAS -->
+                <div class="fee">
+                    3.ª classe
+                    <b>2.800 Kz</b>
+                </div>
 
-<div class="fees reveal">
+                <div class="fee">
+                    4.ª classe
+                    <b>3.000 Kz</b>
+                </div>
 
-<div class="fees-title">
+                <div class="fee">
+                    5.ª classe
+                    <b>3.500 Kz</b>
+                </div>
 
-💳 Propinas mensais — Ano Lectivo 2026/2027
+                <div class="fee">
+                    6.ª classe
+                    <b>4.000 Kz</b>
+                </div>
 
-</div>
+                <div class="fee">
+                    7.ª classe
+                    <b>4.000 Kz</b>
+                </div>
 
+                <div class="fee">
+                    8.ª classe
+                    <b>4.000 Kz</b>
+                </div>
 
-<div class="fee-grid">
+                <div class="fee">
+                    9.ª classe
+                    <b>4.000 Kz</b>
+                </div>
 
+            </div>
 
-<div class="fee">
-Pré <b>2.000 Kz</b>
-</div>
 
-<div class="fee">
-1.ª classe <b>2.300 Kz</b>
-</div>
+            <div class="note">
 
-<div class="fee">
-2.ª classe <b>2.500 Kz</b>
-</div>
+                Confirme valores, vagas e condições
+                directamente com a secretaria.
 
-<div class="fee">
-3.ª classe <b>2.800 Kz</b>
-</div>
+            </div>
 
-<div class="fee">
-4.ª classe <b>3.000 Kz</b>
-</div>
+        </div>
 
-<div class="fee">
-5.ª classe <b>3.500 Kz</b>
-</div>
-
-<div class="fee">
-6.ª classe <b>4.000 Kz</b>
-</div>
-
-<div class="fee">
-7.ª classe <b>4.000 Kz</b>
-</div>
-
-<div class="fee">
-8.ª classe <b>4.000 Kz</b>
-</div>
-
-<div class="fee">
-9.ª classe <b>4.000 Kz</b>
-</div>
-
-
-</div>
-
-
-<div class="note">
-
-Valores apresentados de acordo com as informações
-existentes neste material. Confirme valores, vagas e
-condições directamente com a secretaria.
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      OFERTA
-===================================================== -->
+====================================================== -->
 
 <section id="oferta">
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="section-head reveal">
+
+            <small>
+                O que oferecemos
+            </small>
+
+            <h2>
+                Educação com disciplina
+                e acompanhamento.
+            </h2>
+
+            <p>
+                Uma proposta educativa orientada para
+                a formação escolar e o desenvolvimento
+                dos alunos.
+            </p>
+
+        </div>
 
 
-<div class="section-head reveal">
-
-<small>
-O que oferecemos
-</small>
-
-<h2>
-Educação com disciplina e acompanhamento.
-</h2>
-
-<p>
-Características e serviços apresentados nas informações
-institucionais utilizadas neste website.
-</p>
-
-</div>
+        <div class="offers">
 
 
+            <div>
 
-<div class="offers">
+                <div class="offer reveal">
 
+                    <div class="check">
+                        ✓
+                    </div>
 
-<div>
+                    <div>
 
+                        <b>
+                            Professores qualificados
+                            e experientes
+                        </b>
 
-<div class="offer reveal">
+                        <p>
+                            Equipa orientada para
+                            o processo de aprendizagem.
+                        </p>
 
-<div class="check">
-✓
-</div>
+                    </div>
 
-<div>
-
-<b>
-Professores qualificados e experientes.
-</b>
-
-<p>
-Equipa orientada para o processo de aprendizagem.
-</p>
-
-</div>
-
-</div>
+                </div>
 
 
+                <div class="offer reveal">
 
-<div class="offer reveal">
+                    <div class="check">
+                        ✓
+                    </div>
 
-<div class="check">
-✓
-</div>
+                    <div>
 
-<div>
+                        <b>
+                            Retiro pedagógico
+                            e formativo
+                        </b>
 
-<b>
-Retiro pedagógico e formativo.
-</b>
+                        <p>
+                            Actividades de carácter
+                            pedagógico e formativo.
+                        </p>
 
-<p>
-Actividades de carácter pedagógico e formativo.
-</p>
+                    </div>
 
-</div>
-
-</div>
-
-
-
-<div class="offer reveal">
-
-<div class="check">
-✓
-</div>
-
-<div>
-
-<b>
-Diversas actividades extracurriculares educativas.
-</b>
-
-<p>
-Experiências educativas para complementar a formação.
-</p>
-
-</div>
-
-</div>
+                </div>
 
 
+                <div class="offer reveal">
 
-<div class="offer reveal">
+                    <div class="check">
+                        ✓
+                    </div>
 
-<div class="check">
-✓
-</div>
+                    <div>
 
-<div>
+                        <b>
+                            Actividades extracurriculares
+                            educativas
+                        </b>
 
-<b>
-Ensino de qualidade, disciplina e acompanhamento personalizado.
-</b>
+                        <p>
+                            Experiências educativas que
+                            complementam a formação.
+                        </p>
 
-<p>
-Compromisso apresentado pela instituição.
-</p>
+                    </div>
 
-</div>
-
-</div>
-
-
-</div>
+                </div>
 
 
+                <div class="offer reveal">
 
-<div class="green-box reveal">
+                    <div class="check">
+                        ✓
+                    </div>
 
-<h3>
-Ramo Verde,
-onde aprender é crescer.
-</h3>
+                    <div>
 
-<p>
-“Educação • Disciplina • Futuro” é a identidade
-apresentada nas informações do colégio.
-</p>
+                        <b>
+                            Acompanhamento personalizado
+                        </b>
 
-<strong>
-INVISTA NO FUTURO DO SEU FILHO
-</strong>
+                        <p>
+                            Ensino de qualidade,
+                            disciplina e acompanhamento.
+                        </p>
 
-</div>
+                    </div>
+
+                </div>
+
+            </div>
 
 
-</div>
+            <div class="green-box reveal">
 
-</div>
+                <h3>
+                    Educação,
+                    disciplina e futuro.
+                </h3>
+
+                <p>
+                    O compromisso apresentado pelo
+                    Colégio Ramo Verde para o
+                    desenvolvimento dos seus alunos.
+                </p>
+
+                <strong>
+                    COLÉGIO RAMO VERDE
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      AMBIENTE
-===================================================== -->
+====================================================== -->
 
 <section
-class="visual-section"
-id="recursos"
+    class="visual-section"
+    id="ambiente"
 >
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="section-head reveal">
+
+            <small>
+                Ambiente de aprendizagem
+            </small>
+
+            <h2>
+                Um espaço para aprender,
+                desenvolver e crescer.
+            </h2>
+
+            <p>
+                A experiência escolar envolve
+                aprendizagem, conhecimento e
+                participação.
+            </p>
+
+        </div>
 
 
-<div class="section-head reveal">
-
-<small>
-Ambiente escolar
-</small>
-
-<h2>
-Aprender também é viver experiências.
-</h2>
-
-<p>
-Uma apresentação visual pensada para destacar aprendizagem,
-alunos, conhecimento e ambiente educativo.
-</p>
-
-</div>
+        <div class="visual-grid">
 
 
+            <div class="visual reveal">
 
-<div class="visual-grid">
+                <img
+                    src="crianças.jpg"
+                    alt="Crianças em ambiente escolar"
+                    loading="lazy"
+                >
 
+                <div class="visual-content">
 
-<div class="visual reveal">
+                    <h3>
+                        Desenvolvimento
+                    </h3>
 
-<img
-src="crianças.jpg"
-alt="Crianças e ambiente educativo"
-loading="lazy"
->
+                    <p>
+                        Educação orientada para
+                        o desenvolvimento dos alunos.
+                    </p>
 
-<div class="visual-content">
+                </div>
 
-<h3>
-Alunos
-</h3>
-
-<p>
-O aluno está no centro do processo de aprendizagem.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
+            <div class="visual reveal">
 
-<div class="visual reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=82"
+                    alt="Professor durante actividade escolar"
+                    loading="lazy"
+                >
 
-<img
-src="banner.jpg"
-alt="Ambiente visual do Colégio Ramo Verde"
-loading="lazy"
->
+                <div class="visual-content">
 
-<div class="visual-content">
+                    <h3>
+                        Aprendizagem
+                    </h3>
 
-<h3>
-Aprendizagem
-</h3>
+                    <p>
+                        Participação e aprendizagem
+                        fazem parte da formação.
+                    </p>
 
-<p>
-Educação, participação e desenvolvimento.
-</p>
+                </div>
 
-</div>
-
-</div>
-
-
-
-<div class="visual reveal">
-
-<div style="
-width:100%;
-height:100%;
-background:
-linear-gradient(145deg,#075b2a,#0b7a39);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
-">
-
-<div style="
-position:absolute;
-width:260px;
-height:260px;
-border:1px solid rgba(255,255,255,.18);
-border-radius:50%;
-">
-
-</div>
-
-<div style="
-position:absolute;
-width:170px;
-height:170px;
-border:1px solid rgba(255,255,255,.15);
-border-radius:50%;
-">
-
-</div>
-
-<div style="
-position:relative;
-z-index:2;
-text-align:center;
-padding:25px;
-color:#fff;
-">
-
-<div style="
-font-size:50px;
-margin-bottom:10px;
-">
-📚
-</div>
-
-<h3>
-Conhecimento
-</h3>
-
-<p style="
-font-size:11px;
-color:#e3eee5;
-margin-top:5px;
-">
-Educação como caminho para o futuro.
-</p>
-
-</div>
-
-</div>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="visual reveal">
 
-</div>
+                <img
+                    src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=82"
+                    alt="Livros e materiais de estudo"
+                    loading="lazy"
+                >
+
+                <div class="visual-content">
+
+                    <h3>
+                        Conhecimento
+                    </h3>
+
+                    <p>
+                        O conhecimento como parte
+                        essencial da formação escolar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     BLOCO INSTITUCIONAL
-===================================================== -->
+<!-- ======================================================
+     DESTAQUE INSTITUCIONAL
+====================================================== -->
 
 <section class="about-visual">
 
-<div class="wrap">
+    <div class="wrap">
 
-<div class="about-grid">
-
-
-<div class="about-image reveal">
-
-<img
-src="crianças.jpg"
-alt="Crianças em ambiente educativo"
-loading="lazy"
->
-
-<div class="about-label">
-
-<b>
-Educação • Disciplina • Futuro
-</b>
-
-<span>
-Uma apresentação digital moderna do Colégio Ramo Verde.
-</span>
-
-</div>
-
-</div>
+        <div class="about-grid">
 
 
+            <div class="about-image reveal">
 
-<div class="reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=82"
+                    alt="Alunos em ambiente de aprendizagem"
+                    loading="lazy"
+                >
 
+                <div class="about-label">
 
-<div class="section-head">
+                    <b>
+                        Educação • Disciplina • Futuro
+                    </b>
 
-<small>
-Uma educação que acompanha
-</small>
+                    <span>
+                        Colégio Ramo Verde
+                    </span>
 
-<h2>
-Formar para o presente e para o futuro.
-</h2>
+                </div>
 
-<p>
-O Colégio Ramo Verde apresenta uma proposta baseada
-em educação, disciplina e acompanhamento.
-</p>
-
-</div>
-
-
-
-<div class="about-points">
+            </div>
 
 
-<div class="about-point">
+            <div class="reveal">
 
-<div class="about-icon">
-🎓
-</div>
+                <div class="section-head">
 
-<div>
+                    <small>
+                        Formação escolar
+                    </small>
 
-<b>
-Formação escolar
-</b>
+                    <h2>
+                        Preparar os alunos
+                        para novos desafios.
+                    </h2>
 
-<p>
-Classes abrangidas do Pré à 9.ª classe.
-</p>
+                    <p>
+                        O Colégio Ramo Verde trabalha
+                        com educação, disciplina e
+                        acompanhamento ao longo da
+                        formação escolar.
+                    </p>
 
-</div>
-
-</div>
-
-
-
-<div class="about-point">
-
-<div class="about-icon">
-👨‍🏫
-</div>
-
-<div>
-
-<b>
-Professores
-</b>
-
-<p>
-Professores qualificados e experientes.
-</p>
-
-</div>
-
-</div>
+                </div>
 
 
-
-<div class="about-point">
-
-<div class="about-icon">
-📚
-</div>
-
-<div>
-
-<b>
-Actividades educativas
-</b>
-
-<p>
-Actividades extracurriculares educativas.
-</p>
-
-</div>
-
-</div>
+                <div class="about-points">
 
 
+                    <div class="about-point">
 
-<div class="about-point">
+                        <div class="about-icon">
+                            🎓
+                        </div>
 
-<div class="about-icon">
-🌱
-</div>
+                        <div>
 
-<div>
+                            <b>
+                                Formação escolar
+                            </b>
 
-<b>
-Acompanhamento
-</b>
+                            <p>
+                                Classes abrangidas
+                                do Pré à 9.ª classe.
+                            </p>
 
-<p>
-Disciplina e acompanhamento personalizado.
-</p>
+                        </div>
 
-</div>
-
-</div>
+                    </div>
 
 
-</div>
+                    <div class="about-point">
 
-</div>
+                        <div class="about-icon">
+                            👨‍🏫
+                        </div>
 
-</div>
+                        <div>
 
-</div>
+                            <b>
+                                Professores
+                            </b>
+
+                            <p>
+                                Professores qualificados
+                                e experientes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <div class="about-icon">
+                            📚
+                        </div>
+
+                        <div>
+
+                            <b>
+                                Actividades educativas
+                            </b>
+
+                            <p>
+                                Actividades extracurriculares
+                                educativas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <div class="about-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <b>
+                                Acompanhamento
+                            </b>
+
+                            <p>
+                                Disciplina e acompanhamento
+                                personalizado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     DESTAQUE VISUAL
-===================================================== -->
-
-<section class="highlight">
-
-<div class="wrap">
-
-<div class="highlight-card reveal">
-
-
-<div class="highlight-content">
-
-<small>
-Colégio Ramo Verde
-</small>
-
-<h2>
-Educação que prepara o amanhã.
-</h2>
-
-<p>
-Um espaço digital para apresentar informações,
-condições de matrícula, contactos e formas de
-interação com o colégio.
-</p>
-
-
-<div class="buttons">
-
-<a
-href="#contacto"
-class="btn"
-style="
-background:#fff;
-color:#075b2a;
-"
->
-📋 Pedir informações
-</a>
-
-</div>
-
-</div>
-
-
-<div class="highlight-image"></div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
+<!-- ======================================================
      GALERIA
-===================================================== -->
+====================================================== -->
 
 <section
-class="gallery"
-id="galeria"
+    class="gallery"
+    id="galeria"
 >
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="section-head reveal">
+
+            <small>
+                Galeria
+            </small>
+
+            <h2>
+                Educação que ganha vida
+                dentro e fora da sala.
+            </h2>
+
+            <p>
+                Um olhar visual sobre aprendizagem,
+                conhecimento e desenvolvimento.
+            </p>
+
+        </div>
 
 
-<div class="section-head reveal">
-
-<small>
-Galeria visual
-</small>
-
-<h2>
-Um website com presença visual.
-</h2>
-
-<p>
-As fotografias do repositório são utilizadas como elementos
-visuais principais. Outros elementos gráficos complementam
-a apresentação.
-</p>
-
-</div>
+        <div class="gallery-grid">
 
 
+            <button
+                class="gallery-item reveal"
+                data-image="crianças.jpg"
+                aria-label="Ver imagem ampliada"
+            >
 
-<div class="gallery-grid">
+                <img
+                    src="crianças.jpg"
+                    alt="Crianças em ambiente escolar"
+                    loading="lazy"
+                >
 
-
-<button
-class="gallery-item reveal"
-data-image="banner.jpg"
-aria-label="Abrir imagem do banner"
->
-
-<img
-src="banner.jpg"
-alt="Banner do Colégio Ramo Verde"
-loading="lazy"
->
-
-<div class="gallery-overlay">
-
-<b>
-Colégio Ramo Verde
-</b>
-
-<span>
-Imagem principal
-</span>
-
-</div>
-
-</button>
+            </button>
 
 
+            <button
+                class="gallery-item reveal"
+                data-image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=90"
+                aria-label="Ver imagem ampliada"
+            >
 
-<button
-class="gallery-item reveal"
-data-image="crianças.jpg"
-aria-label="Abrir imagem das crianças"
->
+                <img
+                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=82"
+                    alt="Professor e alunos"
+                    loading="lazy"
+                >
 
-<img
-src="crianças.jpg"
-alt="Crianças"
-loading="lazy"
->
-
-<div class="gallery-overlay">
-
-<b>
-Alunos
-</b>
-
-<span>
-Ambiente educativo
-</span>
-
-</div>
-
-</button>
+            </button>
 
 
+            <button
+                class="gallery-item reveal"
+                data-image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=90"
+                aria-label="Ver imagem ampliada"
+            >
 
-<button
-class="gallery-item reveal"
-data-image="logo.jpg"
-aria-label="Abrir logotipo"
->
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=82"
+                    alt="Alunos"
+                    loading="lazy"
+                >
 
-<img
-src="logo.jpg"
-alt="Logotipo do Colégio Ramo Verde"
-loading="lazy"
->
-
-<div class="gallery-overlay">
-
-<b>
-Identidade visual
-</b>
-
-<span>
-Colégio Ramo Verde
-</span>
-
-</div>
-
-</button>
+            </button>
 
 
+            <button
+                class="gallery-item reveal"
+                data-image="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=90"
+                aria-label="Ver imagem ampliada"
+            >
 
-<button
-class="gallery-item reveal"
-data-image="banner.jpg"
-aria-label="Abrir imagem"
->
+                <img
+                    src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=82"
+                    alt="Livros e materiais de estudo"
+                    loading="lazy"
+                >
 
-<img
-src="banner.jpg"
-alt="Imagem institucional"
-loading="lazy"
->
+            </button>
 
-<div class="gallery-overlay">
+        </div>
 
-<b>
-Educação
-</b>
-
-<span>
-Educação • Disciplina • Futuro
-</span>
-
-</div>
-
-</button>
-
-
-</div>
-
-
-<div class="visual-note">
-
-ℹ️ As imagens apresentadas nesta página são utilizadas
-como recursos visuais do website. Quando houver fotografias
-institucionais adicionais do colégio, elas podem substituir
-as imagens ilustrativas sem alterar a estrutura do site.
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      CONTACTO
-===================================================== -->
+====================================================== -->
 
-<section
-id="contacto"
-class="contact-section"
->
+<section id="contacto">
 
-<div class="wrap">
+    <div class="wrap">
 
+        <div class="section-head reveal">
 
-<div class="section-head reveal">
+            <small>
+                Contacto
+            </small>
 
-<small>
-Contacto e matrícula
-</small>
+            <h2>
+                Fale directamente
+                com o Colégio Ramo Verde.
+            </h2>
 
-<h2>
-Fale directamente com o colégio.
-</h2>
+            <p>
+                Para informações sobre matrículas,
+                confirmação, propinas, vagas e
+                demais assuntos escolares.
+            </p>
 
-<p>
-Preencha o formulário e envie o pedido directamente
-pelo WhatsApp.
-</p>
+        </div>
 
-</div>
 
+        <div class="contact-grid">
 
 
-<div class="contact-grid">
+            <div class="reveal">
 
 
-<div>
+                <a
+                    class="contact-card"
+                    href="tel:+244947618194"
+                >
 
+                    <div class="ico">
+                        ☎
+                    </div>
 
-<a
-class="contact-card reveal"
-href="tel:+244947618194"
->
+                    <div>
 
-<div class="ico">
-☎
-</div>
+                        <b>
+                            +244 947 618 194
+                        </b>
 
-<div>
+                        <span>
+                            Contacto
+                        </span>
 
-<b>
-+244 947 618 194
-</b>
+                    </div>
 
-<span>
-Contacto
-</span>
+                </a>
 
-</div>
 
-</a>
+                <a
+                    class="contact-card"
+                    href="tel:+244951670113"
+                >
 
+                    <div class="ico">
+                        ☎
+                    </div>
 
+                    <div>
 
-<a
-class="contact-card reveal"
-href="tel:+244951670113"
->
+                        <b>
+                            +244 951 670 113
+                        </b>
 
-<div class="ico">
-☎
-</div>
+                        <span>
+                            Contacto
+                        </span>
 
-<div>
+                    </div>
 
-<b>
-+244 951 670 113
-</b>
+                </a>
 
-<span>
-Contacto
-</span>
 
-</div>
+                <a
+                    class="contact-card"
+                    href="https://wa.me/244947618194"
+                    target="_blank"
+                    rel="noopener"
+                >
 
-</a>
+                    <div class="ico">
+                        💬
+                    </div>
 
+                    <div>
 
+                        <b>
+                            WhatsApp
+                        </b>
 
-<a
-class="contact-card reveal"
-href="https://wa.me/244947618194"
-target="_blank"
-rel="noopener"
->
+                        <span>
+                            Matrículas, propinas,
+                            vagas e informações
+                        </span>
 
-<div class="ico">
-💬
-</div>
+                    </div>
 
-<div>
+                </a>
 
-<b>
-WhatsApp
-</b>
 
-<span>
-Matrículas, propinas, vagas e informações
-</span>
+                <div class="map">
 
-</div>
+                    <b>
+                        📍 Viana – Estalagem KM 12 B,
+                        Bairro Novo
+                    </b>
 
-</a>
+                    <p>
+                        Localização do Colégio Ramo Verde.
+                    </p>
 
+                    <a
+                        class="btn secondary"
+                        target="_blank"
+                        rel="noopener"
+                        href="https://www.google.com/maps/search/?api=1&query=Col%C3%A9gio%20Ramo%20Verde%20Viana%20Estalagem%20KM%2012%20B%20Bairro%20Novo%20Angola"
+                    >
+                        Abrir no Google Maps
+                    </a>
 
+                </div>
 
-<div class="map reveal">
+            </div>
 
-<div class="map-icon">
-📍
-</div>
 
-<b>
-Viana – Estalagem KM 12 B, Bairro Novo
-</b>
+            <!-- FORMULÁRIO -->
 
-<p>
-Localização apresentada nas informações fornecidas.
-</p>
+            <form
+                class="form reveal"
+                id="contactForm"
+            >
 
-<a
-class="btn secondary"
-target="_blank"
-rel="noopener"
-href="https://www.google.com/maps/search/?api=1&query=Col%C3%A9gio%20Ramo%20Verde%20Viana%20Estalagem%20KM%2012%20B%20Bairro%20Novo%20Angola"
->
-Abrir Google Maps
-</a>
+                <h3>
+                    Pedido de informação
+                </h3>
 
-</div>
+                <p class="form-intro">
+                    Envie os seus dados e a sua mensagem
+                    será preparada para o WhatsApp.
+                </p>
 
 
-</div>
+                <div class="fields">
 
 
+                    <div class="field">
 
-<!-- FORMULÁRIO -->
+                        <label for="nome">
+                            Nome do encarregado
+                        </label>
 
-<form
-class="form reveal"
-id="contactForm"
->
+                        <input
+                            id="nome"
+                            type="text"
+                            placeholder="Seu nome"
+                            required
+                        >
 
-<h3>
-Pedido de informação / matrícula
-</h3>
+                    </div>
 
-<p class="form-intro">
-Preencha os dados e o WhatsApp será aberto
-com uma mensagem pronta.
-</p>
 
+                    <div class="field">
 
+                        <label for="telefone">
+                            Telefone
+                        </label>
 
-<div class="fields">
+                        <input
+                            id="telefone"
+                            type="tel"
+                            placeholder="+244..."
+                            required
+                        >
 
+                    </div>
 
-<div class="field">
 
-<label for="nome">
-Nome do encarregado
-</label>
+                    <div class="field">
 
-<input
-id="nome"
-type="text"
-placeholder="Seu nome"
-required
->
+                        <label for="classe">
+                            Classe pretendida
+                        </label>
 
-</div>
+                        <select
+                            id="classe"
+                            required
+                        >
 
+                            <option value="">
+                                Seleccione
+                            </option>
 
+                            <option>
+                                Pré
+                            </option>
 
-<div class="field">
+                            <option>
+                                1.ª classe
+                            </option>
 
-<label for="telefone">
-Telefone
-</label>
+                            <option>
+                                2.ª classe
+                            </option>
 
-<input
-id="telefone"
-type="tel"
-placeholder="+244..."
-required
->
+                            <option>
+                                3.ª classe
+                            </option>
 
-</div>
+                            <option>
+                                4.ª classe
+                            </option>
 
+                            <option>
+                                5.ª classe
+                            </option>
 
+                            <option>
+                                6.ª classe
+                            </option>
 
-<div class="field">
+                            <option>
+                                7.ª classe
+                            </option>
 
-<label for="classe">
-Classe pretendida
-</label>
+                            <option>
+                                8.ª classe
+                            </option>
 
-<select
-id="classe"
-required
->
+                            <option>
+                                9.ª classe
+                            </option>
 
-<option value="">
-Selecione
-</option>
+                        </select>
 
-<option>Pré</option>
-<option>1.ª classe</option>
-<option>2.ª classe</option>
-<option>3.ª classe</option>
-<option>4.ª classe</option>
-<option>5.ª classe</option>
-<option>6.ª classe</option>
-<option>7.ª classe</option>
-<option>8.ª classe</option>
-<option>9.ª classe</option>
+                    </div>
 
-</select>
 
-</div>
+                    <div class="field">
 
+                        <label for="assunto">
+                            Assunto
+                        </label>
 
+                        <select id="assunto">
 
-<div class="field">
+                            <option>
+                                Matrícula
+                            </option>
 
-<label for="assunto">
-Assunto
-</label>
+                            <option>
+                                Confirmação
+                            </option>
 
-<select id="assunto">
+                            <option>
+                                Propinas
+                            </option>
 
-<option>
-Matrícula
-</option>
+                            <option>
+                                Vagas
+                            </option>
 
-<option>
-Confirmação
-</option>
+                            <option>
+                                Outras informações
+                            </option>
 
-<option>
-Propinas
-</option>
+                        </select>
 
-<option>
-Vagas
-</option>
+                    </div>
 
-<option>
-Outras informações
-</option>
 
-</select>
+                    <div class="field full">
 
-</div>
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
 
+                        <textarea
+                            id="mensagem"
+                            placeholder="Escreva a sua dúvida..."
+                        ></textarea>
 
+                    </div>
 
-<div class="field full">
+                </div>
 
-<label for="mensagem">
-Mensagem
-</label>
 
-<textarea
-id="mensagem"
-placeholder="Escreva a sua dúvida..."
-></textarea>
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    💬 Enviar pelo WhatsApp
+                </button>
 
-</div>
+            </form>
 
+        </div>
 
-</div>
-
-
-
-<button
-type="submit"
-class="btn primary"
->
-💬 Enviar pelo WhatsApp
-</button>
-
-
-</form>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      FAQ
-===================================================== -->
+====================================================== -->
 
 <section class="faq">
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="section-head reveal">
+
+            <small>
+                Perguntas frequentes
+            </small>
+
+            <h2>
+                Informações rápidas.
+            </h2>
+
+        </div>
 
 
-<div class="section-head reveal">
-
-<small>
-Perguntas frequentes
-</small>
-
-<h2>
-Informações rápidas.
-</h2>
-
-</div>
+        <div class="faq-list">
 
 
+            <div class="faq-item reveal">
 
-<div class="faq-item reveal">
+                <button class="faq-q">
 
-<button
-class="faq-q"
-type="button"
->
+                    Qual é o ano lectivo?
 
-Qual é o ano lectivo?
+                    <span>
+                        +
+                    </span>
 
-<span>
-+
-</span>
+                </button>
 
-</button>
+                <div class="faq-a">
+                    2026/2027.
+                </div>
 
-<div class="faq-a">
-
-2026/2027.
-
-</div>
-
-</div>
+            </div>
 
 
+            <div class="faq-item reveal">
 
-<div class="faq-item reveal">
+                <button class="faq-q">
 
-<button
-class="faq-q"
-type="button"
->
+                    Que classes estão abrangidas?
 
-Que classes estão abrangidas?
+                    <span>
+                        +
+                    </span>
 
-<span>
-+
-</span>
+                </button>
 
-</button>
+                <div class="faq-a">
+                    Pré até à 5.ª classe e
+                    6.ª até à 9.ª classe.
+                </div>
 
-<div class="faq-a">
-
-Pré até à 5.ª classe e 6.ª até à 9.ª classe.
-
-</div>
-
-</div>
+            </div>
 
 
+            <div class="faq-item reveal">
 
-<div class="faq-item reveal">
+                <button class="faq-q">
 
-<button
-class="faq-q"
-type="button"
->
+                    Existe promoção?
 
-Existe promoção?
+                    <span>
+                        +
+                    </span>
 
-<span>
-+
-</span>
+                </button>
 
-</button>
+                <div class="faq-a">
 
-<div class="faq-a">
+                    Sim. Os primeiros 20 alunos
+                    que efectuarem a matrícula
+                    terão 50% de desconto no
+                    valor da matrícula.
 
-Sim. A informação apresentada indica 50% de desconto
-no valor da matrícula para os primeiros 20 alunos
-que efectuarem a matrícula.
+                </div>
 
-</div>
-
-</div>
+            </div>
 
 
+            <div class="faq-item reveal">
 
-<div class="faq-item reveal">
+                <button class="faq-q">
 
-<button
-class="faq-q"
-type="button"
->
+                    Como confirmar os valores e vagas?
 
-Como confirmar os valores e vagas?
+                    <span>
+                        +
+                    </span>
 
-<span>
-+
-</span>
+                </button>
 
-</button>
+                <div class="faq-a">
 
-<div class="faq-a">
+                    Contacte
+                    +244 947 618 194 ou
+                    +244 951 670 113,
+                    ou utilize o WhatsApp.
 
-Contacte +244 947 618 194 ou +244 951 670 113,
-ou utilize o WhatsApp.
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-
-</div>
+    </div>
 
 </section>
-
-
-
-<!-- =====================================================
-     CTA FINAL
-===================================================== -->
-
-<section class="final-cta">
-
-<div class="wrap">
-
-<div class="final-card reveal">
-
-<h2>
-Quer saber mais sobre as matrículas?
-</h2>
-
-<p>
-Entre em contacto com o Colégio Ramo Verde através
-do WhatsApp e solicite informações sobre vagas,
-classes, propinas e condições de matrícula.
-</p>
-
-
-<div class="buttons">
-
-<a
-href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Gostaria%20de%20saber%20mais%20sobre%20as%20matrículas%202026/2027."
-target="_blank"
-rel="noopener"
-class="btn"
-style="
-background:#fff;
-color:#075b2a;
-"
->
-💬 Falar no WhatsApp
-</a>
-
-
-<a
-href="#matriculas"
-class="btn"
-style="
-background:rgba(255,255,255,.12);
-color:#fff;
-border:1px solid rgba(255,255,255,.25);
-"
->
-🎓 Ver condições
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 </main>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
 <footer>
 
-<div class="wrap">
+    <div class="wrap">
+
+        <div class="footer-grid">
 
 
-<div class="footer-grid">
+            <div>
+
+                <h4>
+                    COLÉGIO RAMO VERDE
+                </h4>
+
+                <p>
+                    Educação • Disciplina • Futuro
+                </p>
+
+                <p>
+                    Educar hoje, transformar
+                    o amanhã.
+                </p>
+
+            </div>
 
 
-<div>
+            <div>
 
-<div class="footer-brand">
+                <h4>
+                    Navegação
+                </h4>
 
-<div class="footer-logo">
+                <div class="footer-links">
 
-<img
-src="logo.jpg"
-alt="Logotipo"
->
+                    <a href="#inicio">
+                        Início
+                    </a>
 
-</div>
+                    <a href="#matriculas">
+                        Matrículas
+                    </a>
 
-<div>
+                    <a href="#oferta">
+                        O que oferecemos
+                    </a>
 
-<h4 style="margin:0;">
-COLÉGIO RAMO VERDE
-</h4>
+                    <a href="#ambiente">
+                        Ambiente
+                    </a>
 
-<span>
-Educação • Disciplina • Futuro
-</span>
+                    <a href="#galeria">
+                        Galeria
+                    </a>
 
-</div>
+                    <a href="#contacto">
+                        Contacto
+                    </a>
 
-</div>
+                </div>
 
-
-<p>
-Educar hoje, transformar o amanhã.
-</p>
-
-</div>
-
-
-
-<div>
-
-<h4>
-Navegação
-</h4>
-
-<div class="footer-links">
-
-<a href="#inicio">
-Início
-</a>
-
-<a href="#matriculas">
-Matrículas
-</a>
-
-<a href="#oferta">
-O que oferecemos
-</a>
-
-<a href="#galeria">
-Galeria
-</a>
-
-<a href="#contacto">
-Contacto
-</a>
-
-</div>
-
-</div>
+            </div>
 
 
+            <div>
 
-<div>
+                <h4>
+                    Contacto
+                </h4>
 
-<h4>
-Contacto
-</h4>
+                <div class="footer-links">
 
-<div class="footer-links">
+                    <a href="tel:+244947618194">
+                        +244 947 618 194
+                    </a>
 
-<a href="tel:+244947618194">
-+244 947 618 194
-</a>
+                    <a href="tel:+244951670113">
+                        +244 951 670 113
+                    </a>
 
-<a href="tel:+244951670113">
-+244 951 670 113
-</a>
+                    <a
+                        href="https://wa.me/244947618194"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
 
-<a
-href="https://wa.me/244947618194"
-target="_blank"
-rel="noopener"
->
-WhatsApp
-</a>
+                    <span>
+                        Viana – Estalagem KM 12 B,
+                        Bairro Novo
+                    </span>
 
-<span>
-Viana – Estalagem KM 12 B, Bairro Novo
-</span>
+                </div>
 
-</div>
+            </div>
 
-</div>
-
-
-</div>
-
+        </div>
 
 
-<div class="copyright">
+        <div class="copyright">
 
-<span>
-© 2026 Colégio Ramo Verde
-</span>
+            <span>
+                © 2026 Colégio Ramo Verde
+            </span>
 
-<span>
-Educação • Disciplina • Futuro
-</span>
+            <span>
+                Educação • Disciplina • Futuro
+            </span>
 
-</div>
+        </div>
 
-
-</div>
+    </div>
 
 </footer>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      WHATSAPP FLUTUANTE
-===================================================== -->
+====================================================== -->
 
 <a
-class="whatsapp"
-href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
-target="_blank"
-rel="noopener"
-aria-label="Falar com o Colégio Ramo Verde pelo WhatsApp"
+    class="whatsapp"
+    href="https://wa.me/244947618194?text=Olá%20Colégio%20Ramo%20Verde!%20Quero%20informações%20sobre%20as%20matrículas%202026/2027."
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar com o Colégio Ramo Verde pelo WhatsApp"
 >
-💬
+    💬
 </a>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      BOTÃO TOPO
-===================================================== -->
+====================================================== -->
 
 <button
-class="to-top"
-id="toTop"
-aria-label="Voltar ao topo"
+    class="to-top"
+    id="toTop"
+    aria-label="Voltar ao topo"
 >
-↑
+    ↑
 </button>
 
 
-
-<!-- =====================================================
+<!-- ======================================================
      MODAL
-===================================================== -->
+====================================================== -->
 
 <div
-class="modal"
-id="imageModal"
+    class="modal"
+    id="imageModal"
 >
 
-<div class="modal-box">
+    <div class="modal-box">
 
-<button
-class="close"
-id="closeModal"
-aria-label="Fechar imagem"
->
-×
-</button>
+        <button
+            class="close"
+            id="closeModal"
+            aria-label="Fechar imagem"
+        >
+            ×
+        </button>
 
-<img
-id="modalImage"
-src=""
-alt="Imagem ampliada"
->
+        <img
+            id="modalImage"
+            src=""
+            alt="Imagem ampliada"
+        >
+
+    </div>
 
 </div>
 
-</div>
 
-
-
-<!-- =====================================================
+<!-- ======================================================
      JAVASCRIPT
-===================================================== -->
+====================================================== -->
 
 <script>
 
-/* =====================================================
+/* =========================================================
    MENU MOBILE
-===================================================== */
+========================================================= */
 
 const menu =
-document.getElementById("menu");
+    document.getElementById("menu");
 
 const navLinks =
-document.getElementById("navLinks");
-
+    document.getElementById("navLinks");
 
 menu.addEventListener("click", () => {
 
-const open =
-navLinks.classList.toggle("open");
+    const open =
+        navLinks.classList.toggle("open");
 
-menu.setAttribute(
-"aria-expanded",
-open ? "true" : "false"
-);
+    menu.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+    );
 
 });
 
 
 navLinks
-.querySelectorAll("a")
-.forEach(link => {
+    .querySelectorAll("a")
+    .forEach(link => {
 
-link.addEventListener("click", () => {
+        link.addEventListener("click", () => {
 
-navLinks.classList.remove("open");
+            navLinks.classList.remove("open");
 
-menu.setAttribute(
-"aria-expanded",
-"false"
-);
+            menu.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-});
+        });
 
-});
+    });
 
 
-/* =====================================================
+/* =========================================================
    FAQ
-===================================================== */
+========================================================= */
 
 document
-.querySelectorAll(".faq-q")
-.forEach(button => {
+    .querySelectorAll(".faq-q")
+    .forEach(button => {
 
-button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-const item =
-button.parentElement;
+            const item =
+                button.parentElement;
 
-item.classList.toggle("open");
+            item.classList.toggle("open");
 
-const icon =
-button.querySelector("span");
+            const icon =
+                button.querySelector("span");
 
-icon.textContent =
-item.classList.contains("open")
-? "−"
-: "+";
+            icon.textContent =
+                item.classList.contains("open")
+                    ? "−"
+                    : "+";
 
-});
+        });
 
-});
+    });
 
 
-/* =====================================================
+/* =========================================================
    GALERIA
-===================================================== */
+========================================================= */
 
 const modal =
-document.getElementById("imageModal");
+    document.getElementById("imageModal");
 
 const modalImage =
-document.getElementById("modalImage");
+    document.getElementById("modalImage");
 
 const closeModal =
-document.getElementById("closeModal");
+    document.getElementById("closeModal");
 
 
 document
-.querySelectorAll(".gallery-item")
-.forEach(item => {
+    .querySelectorAll(".gallery-item")
+    .forEach(item => {
 
-item.addEventListener("click", () => {
+        item.addEventListener("click", () => {
 
-modalImage.src =
-item.dataset.image;
+            const image =
+                item.getAttribute("data-image");
 
-modal.classList.add("open");
+            modalImage.src = image;
 
-document.body.style.overflow =
-"hidden";
+            modal.classList.add("open");
 
-});
+            document.body.style.overflow =
+                "hidden";
 
-});
+        });
+
+    });
 
 
 function closeGallery(){
 
-modal.classList.remove("open");
+    modal.classList.remove("open");
 
-modalImage.src = "";
+    modalImage.src = "";
 
-document.body.style.overflow =
-"";
+    document.body.style.overflow = "";
 
 }
 
 
 closeModal.addEventListener(
-"click",
-closeGallery
+    "click",
+    closeGallery
 );
 
 
 modal.addEventListener(
-"click",
-event => {
+    "click",
+    event => {
 
-if(event.target === modal){
+        if(event.target === modal){
 
-closeGallery();
+            closeGallery();
 
-}
+        }
 
-});
+    }
+);
 
 
 document.addEventListener(
-"keydown",
-event => {
+    "keydown",
+    event => {
 
-if(event.key === "Escape"){
+        if(event.key === "Escape"){
 
-closeGallery();
+            closeGallery();
 
-}
+        }
 
-});
+    }
+);
 
 
-/* =====================================================
-   FORMULÁRIO WHATSAPP
-===================================================== */
+/* =========================================================
+   FORMULÁRIO → WHATSAPP
+========================================================= */
 
 const form =
-document.getElementById("contactForm");
+    document.getElementById("contactForm");
 
 
 form.addEventListener(
-"submit",
-event => {
+    "submit",
+    event => {
 
-event.preventDefault();
-
-
-const nome =
-document
-.getElementById("nome")
-.value
-.trim();
+        event.preventDefault();
 
 
-const telefone =
-document
-.getElementById("telefone")
-.value
-.trim();
+        const nome =
+            document
+                .getElementById("nome")
+                .value
+                .trim();
 
 
-const classe =
-document
-.getElementById("classe")
-.value;
+        const telefone =
+            document
+                .getElementById("telefone")
+                .value
+                .trim();
 
 
-const assunto =
-document
-.getElementById("assunto")
-.value;
+        const classe =
+            document
+                .getElementById("classe")
+                .value;
 
 
-const mensagem =
-document
-.getElementById("mensagem")
-.value
-.trim();
+        const assunto =
+            document
+                .getElementById("assunto")
+                .value;
 
 
-if(!nome || !telefone || !classe){
-
-alert(
-"Por favor, preencha o nome, telefone e classe."
-);
-
-return;
-
-}
+        const mensagem =
+            document
+                .getElementById("mensagem")
+                .value
+                .trim();
 
 
-const texto =
-
+        const texto =
 `Olá Colégio Ramo Verde!
 
 Gostaria de obter informações sobre o Ano Lectivo 2026/2027.
@@ -4893,135 +3673,103 @@ Mensagem:
 ${mensagem || "Gostaria de receber mais informações, por favor."}`;
 
 
-const url =
-
-"https://wa.me/244947618194?text=" +
-
-encodeURIComponent(texto);
+        const url =
+            "https://wa.me/244947618194?text=" +
+            encodeURIComponent(texto);
 
 
-window.open(
-url,
-"_blank",
-"noopener"
+        window.open(
+            url,
+            "_blank",
+            "noopener"
+        );
+
+    }
 );
 
-});
 
-
-/* =====================================================
-   BOTÃO VOLTAR AO TOPO
-===================================================== */
+/* =========================================================
+   VOLTAR AO TOPO
+========================================================= */
 
 const topButton =
-document.getElementById("toTop");
+    document.getElementById("toTop");
 
 
 window.addEventListener(
-"scroll",
-() => {
+    "scroll",
+    () => {
 
-if(window.scrollY > 500){
+        if(window.scrollY > 500){
 
-topButton.style.display =
-"block";
+            topButton.style.display =
+                "block";
 
-}else{
+        }else{
 
-topButton.style.display =
-"none";
+            topButton.style.display =
+                "none";
 
-}
+        }
 
-},
-{passive:true}
+    }
 );
 
 
 topButton.addEventListener(
-"click",
-() => {
+    "click",
+    () => {
 
-window.scrollTo({
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
 
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
+    }
+);
 
 
-/* =====================================================
-   ANIMAÇÃO DE ENTRADA
-===================================================== */
+/* =========================================================
+   ANIMAÇÕES DE ENTRADA
+========================================================= */
 
 const observer =
-new IntersectionObserver(
-(entries) => {
+    new IntersectionObserver(
+        entries => {
 
-entries.forEach(entry => {
+            entries.forEach(entry => {
 
-if(entry.isIntersecting){
+                if(entry.isIntersecting){
 
-entry.target.classList.add(
-"visible"
-);
+                    entry.target.classList.add(
+                        "visible"
+                    );
 
-observer.unobserve(
-entry.target
-);
+                    observer.unobserve(
+                        entry.target
+                    );
 
-}
+                }
 
-});
+            });
 
-},
-{
-threshold:.10
-}
-);
+        },
+        {
+            threshold:.10
+        }
+    );
 
 
 document
-.querySelectorAll(".reveal")
-.forEach(element => {
+    .querySelectorAll(".reveal")
+    .forEach(element => {
 
-observer.observe(element);
+        observer.observe(element);
 
-});
+    });
 
-
-/* =====================================================
-   FALLBACK PARA IMAGENS
-===================================================== */
-
-document
-.querySelectorAll("img")
-.forEach(image => {
-
-image.addEventListener(
-"error",
-() => {
-
-image.style.background =
-"linear-gradient(135deg,#075b2a,#0b7a39)";
-
-image.style.objectFit =
-"contain";
-
-image.style.padding =
-"20px";
-
-},
-{once:true}
-);
-
-});
 
 </script>
-
 
 </body>
 </html>
